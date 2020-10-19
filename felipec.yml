@@ -65,6 +65,6 @@ highlights:
   diffRemoved: 'red . -'
   diffFileId: '#60a #dbe -'
   diffFile: 'gray . -'
-  diffOldFile: 'green . -'
-  diffNewFile: 'red . -'
+  diffNewFile: 'green . -'
+  diffOldFile: 'red . -'
   Keyword: 'cyan . .'
