@@ -24,6 +24,11 @@ palette:
 
   darkyellow: [60, 100, 20]
 
+  bg_red: [0, 25, 25]
+  bg_green: [120, 25, 25]
+  bg_cyan: [180, 25, 25]
+  bg_blue: [240, 25, 25]
+
 highlights:
   Normal: 'fg bg -'
   Cursor: '- #bde -'
@@ -59,10 +64,10 @@ highlights:
   Todo: 'darkgray gray b'
   Error: 'orange - br'
   Underlined: 'cyan . u'
-  DiffAdd: '. #354 -'
-  DiffDelete: '#433 #433 -'
-  DiffChange: '. #345 -'
-  DiffText: '. #345 -'
+  DiffAdd: '- bg_green'
+  DiffDelete: 'bg_red bg_red'
+  DiffChange: '- bg_blue'
+  DiffText: '- bg_cyan'
   diffAdded: 'green . -'
   diffRemoved: 'red . -'
   diffFileId: '#60a #dbe -'
