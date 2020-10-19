@@ -69,3 +69,4 @@ highlights:
   diffNewFile: 'green . -'
   diffOldFile: 'red . -'
   Keyword: 'cyan . .'
+  Title: 'blue'
