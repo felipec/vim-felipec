@@ -38,7 +38,7 @@ highlights:
   FoldColumn: 'blue darkgray b'
   NonText: 'darkyellow darkgray -'
   SpecialKey: 'orange . -'
-  Search: '#60a #dbe u'
+  Search: 'yellow - br'
   SpellBad: '. . . red'
   SpellCap: '. . . azure'
   SpellRare: '. . . magenta'
