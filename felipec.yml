@@ -47,7 +47,7 @@ highlights:
   CursorLineNr: 'yellow . b'
   CursorLine: '. darkgray . .'
   CursorColumn: '. darkgray . .'
-  Visual: '. darkgray . .'
+  Visual: '- darkgray'
   Pmenu: '#213 #dbe .'
   PmenuSel: '#dbe #213 .'
   SignColumn: '. darkgray .'
