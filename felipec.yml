@@ -44,7 +44,7 @@ highlights:
   Visual: '. darkgray . .'
   Pmenu: '#213 #dbe .'
   PmenuSel: '#dbe #213 .'
-  SignColumn: 'cyan darkgray .'
+  SignColumn: '. darkgray .'
   Comment: 'suvagray . i'
   Constant: 'red . -'
   String: 'green . i'
