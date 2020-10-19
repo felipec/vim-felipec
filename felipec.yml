@@ -32,7 +32,7 @@ palette:
 highlights:
   Normal: 'fg bg -'
   Cursor: '- - r'
-  MatchParen: '. #56a .'
+  MatchParen: 'red bg_red b'
   ErrorMsg: 'orange - br'
   Folded: 'blue darkgray b'
   FoldColumn: 'blue darkgray b'
