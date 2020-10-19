@@ -3,48 +3,68 @@ information:
   name: felipec
   background: dark
   author: 'Felipe Contreras <felipe.contreras@gmail.com>'
+palette:
+  fg: [0, 0, 90]
+  bg: [0, 0, 10]
+
+  darkgray: [0, 0, 20]
+  gray: [0, 0, 50]
+  suvagray: [0, 0, 56]
+
+  red: [0, 100, 75]
+  orange: [30, 100, 75]
+  yellow: [60, 100, 75]
+  green: [120, 100, 75]
+  cyan: [180, 100, 75]
+  azure: [210, 100, 75]
+  blue: [240, 100, 75]
+  purple: [270, 100, 75]
+  magenta: [300, 100, 75]
+
+  darkyellow: [60, 100, 20]
+
 highlights:
-  Normal: '#eee #111 -'
+  Normal: 'fg bg -'
   Cursor: '- #bde -'
   MatchParen: '. #56a .'
-  ErrorMsg: '#000 #fc8 b'
-  Folded: '#88f #333 b'
-  FoldColumn: '#88f #333 b'
-  NonText: '#888 #333 -'
+  ErrorMsg: 'orange - br'
+  Folded: 'blue darkgray b'
+  FoldColumn: 'blue darkgray b'
+  NonText: 'gray darkgray -'
   Search: '#60a #dbe u'
-  SpellBad: '. . . #b55'
-  SpellCap: '. . . #55b'
-  SpellRare: '. . . #b5b'
-  SpellLocal: '. . . #5bb'
-  LineNr: '#bb8 . .'
-  CursorLineNr: '#ee8 . b'
-  CursorLine: '. #444 . .'
-  CursorColumn: '. #444 . .'
-  Visual: '. #333 . .'
+  SpellBad: '. . . red'
+  SpellCap: '. . . azure'
+  SpellRare: '. . . magenta'
+  SpellLocal: '. . . cyan'
+  LineNr: 'darkyellow . .'
+  CursorLineNr: 'yellow . b'
+  CursorLine: '. darkgray . .'
+  CursorColumn: '. darkgray . .'
+  Visual: '. darkgray . .'
   Pmenu: '#213 #dbe .'
   PmenuSel: '#dbe #213 .'
-  SignColumn: '#8ff #333 .'
-  Comment: '#999 . i'
-  Constant: '#f88 . -'
-  String: '#6e6 . i'
-  Boolean: '#f88 . b'
-  Identifier: '#f8f . -'
-  Function: '#8f8 . b'
-  Statement: '#8cf . -'
-  PreProc: '#c8f . -'
-  Type: '#ef8 . -'
-  Special: '#fd8 . -'
-  Todo: '#444 #999 b'
-  Error: '#000 #fc8 b'
-  Underlined: '#8af . u'
+  SignColumn: 'cyan darkgray .'
+  Comment: 'suvagray . i'
+  Constant: 'red . -'
+  String: 'green . i'
+  Boolean: 'red . b'
+  Identifier: 'magenta . -'
+  Function: 'green . b'
+  Statement: 'azure . -'
+  PreProc: 'purple . -'
+  Type: 'yellow . -'
+  Special: 'orange . -'
+  Todo: 'darkgray gray b'
+  Error: 'orange - br'
+  Underlined: 'cyan . u'
   DiffAdd: '. #354 -'
   DiffDelete: '#433 #433 -'
   DiffChange: '. #345 -'
   DiffText: '. #345 -'
-  diffAdded: '#5f5 . -'
-  diffRemoved: '#f55 . -'
+  diffAdded: 'green . -'
+  diffRemoved: 'red . -'
   diffFileId: '#60a #dbe -'
-  diffFile: '#999 . -'
-  diffOldFile: '#9f9 . -'
-  diffNewFile: '#f99 . -'
-  Keyword: '#8ff . .'
+  diffFile: 'gray . -'
+  diffOldFile: 'green . -'
+  diffNewFile: 'red . -'
+  Keyword: 'cyan . .'
