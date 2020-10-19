@@ -4,12 +4,12 @@ information:
   background: dark
   author: 'Felipe Contreras <felipe.contreras@gmail.com>'
 palette:
-  fg: [0, 0, 90]
-  bg: [0, 0, 10]
+  fg: [0, 0, 93.75]
+  bg: [0, 0, 6.25]
 
   darkgray: [0, 0, 20]
   gray: [0, 0, 50]
-  suvagray: [0, 0, 56]
+  suvagray: [0, 0, 56.25]
 
   red: [0, 100, 75]
   orange: [30, 100, 75]
