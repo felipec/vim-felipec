@@ -14,6 +14,7 @@ palette:
   red: [0, 100, 75]
   orange: [30, 100, 75]
   yellow: [60, 100, 75]
+  sulu: [90, 100, 75]
   green: [120, 100, 75]
   cyan: [180, 100, 75]
   azure: [210, 100, 75]
@@ -50,7 +51,7 @@ highlights:
   String: 'green . i'
   Boolean: 'red . b'
   Identifier: 'magenta . -'
-  Function: 'green . b'
+  Function: 'sulu . b'
   Statement: 'azure . -'
   PreProc: 'purple . -'
   Type: 'yellow . -'
