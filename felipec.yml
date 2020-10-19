@@ -61,7 +61,7 @@ highlights:
   PreProc: 'purple . -'
   Type: 'yellow . -'
   Special: 'orange . -'
-  Todo: 'darkgray gray b'
+  Todo: 'red darkgray bi'
   Error: 'orange - br'
   Underlined: 'cyan . u'
   DiffAdd: '- bg_green'
