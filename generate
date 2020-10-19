@@ -85,7 +85,7 @@ def hsl_to_rgb(h, s, l)
     r, g, b = r + m, g + m, b + m
   end
 
-  return [(r * 255).round, (g * 255).round, (b * 255).round]
+  return [r, g, b].map { |e| (e * 255).round }
 end
 
 def get_color(color)
