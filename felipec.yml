@@ -70,3 +70,5 @@ highlights:
   diffOldFile: 'red . -'
   Keyword: 'cyan . .'
   Title: 'blue'
+  rubyArrayDelimiter: 'azure'
+  rubyCurlyBlockDelimiter: 'azure'
