@@ -74,6 +74,7 @@ highlights:
   PmenuSel: 'blue darkgray br'
   PmenuSbar: '- darkgray'
   PmenuThumb: '- yellow'
+  WildMenu: 'blue darkgray br'
   LineNr: 'darkyellow'
   CursorLine: '- darkgray'
   CursorColumn: '- darkgray'
