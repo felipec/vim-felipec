@@ -11,6 +11,7 @@ palette:
   darkgray: [0, 0, 20]
   gray: [0, 0, 50]
   suvagray: [0, 0, 56.25]
+  silver: [0, 0, 75]
 
   red: [0, 100, 75]
   orange: [30, 100, 75]
