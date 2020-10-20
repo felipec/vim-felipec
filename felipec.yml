@@ -102,3 +102,8 @@ highlights:
   TabLineFill: ''
   TabLine: 'gray darkgray'
   TabLineSel: 'blue darkgray'
+  StatusLine: 'darkgray fg r'
+  StatusLineNC: 'darkgray gray r'
+  VertSplit: 'darkgray fg r'
+  ColorColumn: '- darkgray'
+  QuickFixLine: '- bg_cyan'
