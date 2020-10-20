@@ -1,6 +1,11 @@
-felipec is my own personal colorscheme I've been tuning for several years.
+felipec is my own personal vim colorscheme I've been tuning for several years.
+
+Dark, bright, and simple.
 
 Disillusioned with all the other colorschemes and generators I decided to create my own.
+The template format draws inspiration from https://github.com/jacoborus/estilo/[estilo], but it's much more simple.
+
+There's also a lightline colorscheme.
 
 == Screenshots ==
 
@@ -20,3 +25,9 @@ Install with your favorite plugin manager.
 git clone https://github.com/felipec/vim-felipec.git ~/.vim/pack/colors/start/felipec
 --------------------------------------
 
+Then in your `.vimrc`:
+
+--------------------------------------
+colorscheme felipec
+let g:lightline = { 'colorscheme': 'felipec' }
+--------------------------------------
