@@ -1,56 +1,76 @@
 " Maintainer: Felipe Contreras <felipe.contreras@gmail.com>
 
 set background=dark
-
 hi clear
-
 if exists('syntax_on')
   syntax reset
 endif
-
 let g:colors_name='felipec'
 
-hi Normal guifg=#eeeeee ctermfg=255 guibg=#111111 ctermbg=233 gui=NONE cterm=NONE
-hi Cursor guifg=NONE ctermfg=NONE guibg=#bbddee ctermbg=153 gui=NONE cterm=NONE
-hi MatchParen guibg=#5566aa ctermbg=61
-hi ErrorMsg guifg=#000000 ctermfg=16 guibg=#ffcc88 ctermbg=222 gui=bold cterm=bold
-hi Folded guifg=#8888ff ctermfg=105 guibg=#333333 ctermbg=236 gui=bold cterm=bold
-hi FoldColumn guifg=#8888ff ctermfg=105 guibg=#333333 ctermbg=236 gui=bold cterm=bold
-hi NonText guifg=#888888 ctermfg=102 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
-hi Search guifg=#6600aa ctermfg=55 guibg=#ddbbee ctermbg=183 gui=underline cterm=underline
-hi SpellBad guisp=#bb5555
-hi SpellCap guisp=#5555bb
-hi SpellRare guisp=#bb55bb
-hi SpellLocal guisp=#55bbbb
-hi LineNr guifg=#bbbb88 ctermfg=144
-hi CursorLineNr guifg=#eeee88 ctermfg=228 gui=bold cterm=bold
-hi CursorLine guibg=#444444 ctermbg=238
-hi CursorColumn guibg=#444444 ctermbg=238
-hi Visual guibg=#333333 ctermbg=236
-hi Pmenu guifg=#221133 ctermfg=235 guibg=#ddbbee ctermbg=183
-hi PmenuSel guifg=#ddbbee ctermfg=183 guibg=#221133 ctermbg=235
-hi SignColumn guifg=#88ffff ctermfg=123 guibg=#333333 ctermbg=236
-hi Comment guifg=#999999 ctermfg=247 gui=italic cterm=italic
-hi Constant guifg=#ff8888 ctermfg=210 gui=NONE cterm=NONE
-hi String guifg=#66ee66 ctermfg=83 gui=italic cterm=italic
-hi Boolean guifg=#ff8888 ctermfg=210 gui=bold cterm=bold
-hi Identifier guifg=#ff88ff ctermfg=213 gui=NONE cterm=NONE
-hi Function guifg=#88ff88 ctermfg=120 gui=bold cterm=bold
-hi Statement guifg=#88ccff ctermfg=117 gui=NONE cterm=NONE
-hi PreProc guifg=#cc88ff ctermfg=177 gui=NONE cterm=NONE
-hi Type guifg=#eeff88 ctermfg=228 gui=NONE cterm=NONE
-hi Special guifg=#ffdd88 ctermfg=222 gui=NONE cterm=NONE
-hi Todo guifg=#444444 ctermfg=238 guibg=#999999 ctermbg=247 gui=bold cterm=bold
-hi Error guifg=#000000 ctermfg=16 guibg=#ffcc88 ctermbg=222 gui=bold cterm=bold
-hi Underlined guifg=#88aaff ctermfg=111 gui=underline cterm=underline
-hi DiffAdd guibg=#335544 ctermbg=238 gui=NONE cterm=NONE
-hi DiffDelete guifg=#443333 ctermfg=237 guibg=#443333 ctermbg=237 gui=NONE cterm=NONE
-hi DiffChange guibg=#334455 ctermbg=238 gui=NONE cterm=NONE
-hi DiffText guibg=#334455 ctermbg=238 gui=NONE cterm=NONE
-hi diffAdded guifg=#55ff55 ctermfg=83 gui=NONE cterm=NONE
-hi diffRemoved guifg=#ff5555 ctermfg=203 gui=NONE cterm=NONE
-hi diffFileId guifg=#6600aa ctermfg=55 guibg=#ddbbee ctermbg=183 gui=NONE cterm=NONE
-hi diffFile guifg=#999999 ctermfg=247 gui=NONE cterm=NONE
-hi diffOldFile guifg=#99ff99 ctermfg=120 gui=NONE cterm=NONE
-hi diffNewFile guifg=#ff9999 ctermfg=210 gui=NONE cterm=NONE
-hi Keyword guifg=#88ffff ctermfg=123
+hi Normal guifg=#efefef ctermfg=255 guibg=#101010 ctermbg=233 gui=NONE cterm=NONE
+hi Comment guifg=#8f8f8f ctermfg=246 guibg=NONE ctermbg=NONE gui=italic cterm=italic
+hi Todo guifg=#ff8080 ctermfg=210 guibg=#333333 ctermbg=236 gui=bold,italic cterm=bold,italic
+hi Error guifg=#ff8080 ctermfg=210 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
+hi Constant guifg=#ff8080 ctermfg=210 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Statement guifg=#80bfff ctermfg=111 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Type guifg=#ffff80 ctermfg=228 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Keyword guifg=#80ffbf ctermfg=121 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Identifier guifg=#ff80ff ctermfg=213 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi PreProc guifg=#bf80ff ctermfg=141 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Title guifg=#8080ff ctermfg=105 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Boolean guifg=#ff8080 ctermfg=210 guibg=NONE ctermbg=NONE gui=bold cterm=bold
+hi Function guifg=#bfff80 ctermfg=156 guibg=NONE ctermbg=NONE gui=bold cterm=bold
+hi String guifg=#80ff80 ctermfg=120 guibg=NONE ctermbg=NONE gui=italic cterm=italic
+hi Special guifg=#ffbf80 ctermfg=216 guibg=NONE ctermbg=NONE gui=italic cterm=italic
+hi Underlined guifg=#80ffff ctermfg=123 gui=underline cterm=underline
+hi Cursor guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=reverse cterm=reverse
+hi Search guifg=#ff80bf ctermfg=211 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
+hi Visual guifg=NONE ctermfg=NONE guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi MatchParen guifg=#ff8080 ctermfg=210 guibg=#503030 ctermbg=237 gui=bold cterm=bold
+hi NonText guifg=#666600 ctermfg=58 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi SpecialKey guifg=#ffbf80 ctermfg=216 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi ErrorMsg guifg=#ff8080 ctermfg=210 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
+hi WarningMsg guifg=#ffbf80 ctermfg=216 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
+hi ModeMsg guifg=#ffff80 ctermfg=228 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
+hi MoreMsg guifg=#80ff80 ctermfg=120 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
+hi Question guifg=#80ffff ctermfg=123 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
+hi Directory guifg=#8080ff ctermfg=105 guibg=NONE ctermbg=NONE gui=bold cterm=bold
+hi DiffAdd guifg=NONE ctermfg=NONE guibg=#305030 ctermbg=237 gui=NONE cterm=NONE
+hi DiffDelete guifg=#503030 ctermfg=237 guibg=#503030 ctermbg=237 gui=NONE cterm=NONE
+hi DiffChange guifg=NONE ctermfg=NONE guibg=#303050 ctermbg=237 gui=NONE cterm=NONE
+hi DiffText guifg=NONE ctermfg=NONE guibg=#305050 ctermbg=238 gui=NONE cterm=NONE
+hi Folded guifg=#8080ff ctermfg=105 guibg=#333333 ctermbg=236 gui=italic cterm=italic
+hi FoldColumn guifg=#8080ff ctermfg=105 guibg=#101010 ctermbg=233 gui=NONE cterm=NONE
+hi Pmenu guifg=#efefef ctermfg=255 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi PmenuSel guifg=#8080ff ctermfg=105 guibg=#333333 ctermbg=236 gui=bold,reverse cterm=bold,reverse
+hi PmenuSbar guifg=NONE ctermfg=NONE guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi PmenuThumb guifg=NONE ctermfg=NONE guibg=#ffff80 ctermbg=228 gui=NONE cterm=NONE
+hi WildMenu guifg=#8080ff ctermfg=105 guibg=#333333 ctermbg=236 gui=bold,reverse cterm=bold,reverse
+hi LineNr guifg=#ffbf80 ctermfg=216 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi CursorLine guifg=NONE ctermfg=NONE guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi CursorColumn guifg=NONE ctermfg=NONE guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi CursorLineNr guifg=#ffff80 ctermfg=228 guibg=NONE ctermbg=NONE gui=bold cterm=bold
+hi SpellBad guisp=#ff8080
+hi SpellCap guisp=#80bfff
+hi SpellRare guisp=#ff80ff
+hi SpellLocal guisp=#80ffff
+hi diffAdded guifg=#80ff80 ctermfg=120 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi diffRemoved guifg=#ff8080 ctermfg=210 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi diffFileId guifg=#8080ff ctermfg=105 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
+hi diffFile guifg=#808080 ctermfg=244 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi diffNewFile guifg=#80ff80 ctermfg=120 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi diffOldFile guifg=#ff8080 ctermfg=210 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi rubyArrayDelimiter guifg=#80bfff ctermfg=111 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi rubyCurlyBlockDelimiter guifg=#80bfff ctermfg=111 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi SignColumn guibg=#333333 ctermbg=236
+hi GitGutterAdd guifg=#80ff80 ctermfg=120 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi GitGutterDelete guifg=#ff8080 ctermfg=210 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi GitGutterChange guifg=#8080ff ctermfg=105 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi TabLineFill guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi TabLine guifg=#808080 ctermfg=244 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi TabLineSel guifg=#8080ff ctermfg=105 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi StatusLine guifg=#333333 ctermfg=236 guibg=#efefef ctermbg=255 gui=reverse cterm=reverse
+hi StatusLineNC guifg=#333333 ctermfg=236 guibg=#808080 ctermbg=244 gui=reverse cterm=reverse
+hi VertSplit guifg=#333333 ctermfg=236 guibg=#efefef ctermbg=255 gui=reverse cterm=reverse
+hi ColorColumn guifg=NONE ctermfg=NONE guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+hi QuickFixLine guifg=NONE ctermfg=NONE guibg=#305050 ctermbg=238 gui=NONE cterm=NONE
