@@ -23,6 +23,7 @@ palette:
   blue: [240, 100, 75]
   purple: [270, 100, 75]
   magenta: [300, 100, 75]
+  hotpink: [330, 100, 75]
 
   darkyellow: [60, 100, 20]
 
@@ -52,7 +53,7 @@ highlights:
   Underlined: 'cyan . u'
 
   Cursor: '- - r'
-  Search: 'yellow - br'
+  Search: 'hotpink - br'
   Visual: '- darkgray'
   MatchParen: 'red bg_red b'
   NonText: 'darkyellow darkgray'
