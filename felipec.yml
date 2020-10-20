@@ -71,7 +71,7 @@ highlights:
   Folded: 'blue darkgray i'
   FoldColumn: 'blue darkgray'
   Pmenu: 'fg darkgray'
-  PmenuSel: 'darkgray blue b'
+  PmenuSel: 'blue darkgray br'
   PmenuSbar: '- darkgray'
   PmenuThumb: '- yellow'
   LineNr: 'darkyellow'
