@@ -17,6 +17,7 @@ palette:
   yellow: [60, 100, 75]
   sulu: [90, 100, 75]
   green: [120, 100, 75]
+  aquamarine: [150, 100, 75]
   cyan: [180, 100, 75]
   azure: [210, 100, 75]
   blue: [240, 100, 75]
@@ -40,7 +41,7 @@ highlights:
   Constant: 'red'
   Statement: 'azure'
   Type: 'yellow'
-  Keyword: 'cyan'
+  Keyword: 'aquamarine'
   Identifier: 'magenta'
   PreProc: 'purple'
   Title: 'blue'
