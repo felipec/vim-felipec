@@ -71,7 +71,7 @@ highlights:
   DiffChange: '- bg_blue'
   DiffText: '- bg_cyan'
   Folded: 'blue darkgray i'
-  FoldColumn: 'blue darkgray'
+  FoldColumn: 'blue bg'
   Pmenu: 'fg darkgray'
   PmenuSel: 'blue darkgray br'
   PmenuSbar: '- darkgray'
