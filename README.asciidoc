@@ -1,0 +1,22 @@
+felipec is my own personal colorscheme I've been tuning for several years.
+
+Disillusioned with all the other colorschemes and generators I decided to create my own.
+
+== Screenshots ==
+
+image:https://i.imgur.com/qhcM3BZ.png[C screenshot]
+image:https://i.imgur.com/QZaabZg.png[JavaScript screenshot]
+image:https://i.imgur.com/RCyFgAi.png[Ruby screenshot]
+
+== Color palette ==
+
+image:https://i.imgur.com/nbiBtEd.png[Color palette]
+
+== Installation ==
+
+Install with your favorite plugin manager.
+
+--------------------------------------
+git clone https://github.com/felipec/vim-felipec.git ~/.vim/pack/colors/start/felipec
+--------------------------------------
+
