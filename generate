@@ -27,30 +27,24 @@ def rgb_to_hex(red, green, blue)
 end
 
 # From tmux
-def rgb_to_x256(r, g, b)
+def rgb_to_x256(*orig)
   values = [0x00, 0x5f, 0x87, 0xaf, 0xd7, 0xff]
 
-  def component_index(v)
-    v < 48 ? 0 : v < 114 ? 1 : (v - 35) / 40
+  ir, ig, ib = orig.map do |e|
+    e < 48 ? 0 : e < 115 ? 1 : (e - 35) / 40
   end
 
-  def dist_square(a, b)
-    (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 + (a[2] - b[2]) ** 2
-  end
-
-  red_index, green_index, blue_index = [r, g, b].map { |e| component_index(e) }
-
-  average = (r + g + b) / 3
+  average = orig.sum / 3
   gray_index = average > 238 ? 23 : (average - 3) / 10
-  color_index = 36 * red_index + 6 * green_index + blue_index
+  color_index = 36 * ir + 6 * ig + ib
 
-  cr, cg, cb = [red_index, green_index, blue_index].map { |e| values[e] }
-  gray = 8 + 10 * gray_index
+  r, g, b = orig
+  cr, cg, cb = values[ir], values[ig], values[ib]
+  gv = 8 + 10 * gray_index
+  color_err = (cr - r) ** 2 + (cg - g) ** 2 + (cb - b) ** 2
+  gray_err = (gv - r) ** 2 + (gv - g) ** 2 + (gv - b) ** 2
 
-  color_err = dist_square([r, g, b], [cr, cg, cb])
-  gray_err = dist_square([r, g, b], [gray, gray, gray])
-
-  return color_err <= gray_err ? 16 + color_index : 232 + gray_index
+  color_err <= gray_err ? 16 + color_index : 232 + gray_index
 end
 
 def hsl_to_rgb(h, s, l)
