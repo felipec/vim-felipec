@@ -71,6 +71,8 @@ hi TabLine guifg=#808080 ctermfg=244 guibg=#333333 ctermbg=236 gui=NONE cterm=NO
 hi TabLineSel guifg=#8080ff ctermfg=105 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
 hi StatusLine guifg=#333333 ctermfg=236 guibg=#efefef ctermbg=255 gui=reverse cterm=reverse
 hi StatusLineNC guifg=#333333 ctermfg=236 guibg=#808080 ctermbg=244 gui=reverse cterm=reverse
+hi StatusLineTerm guifg=#333333 ctermfg=236 guibg=#80ff80 ctermbg=120 gui=reverse cterm=reverse
+hi StatusLineTermNC guifg=#333333 ctermfg=236 guibg=#808080 ctermbg=244 gui=reverse cterm=reverse
 hi VertSplit guifg=#333333 ctermfg=236 guibg=#efefef ctermbg=255 gui=reverse cterm=reverse
 hi ColorColumn guifg=NONE ctermfg=NONE guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
 hi QuickFixLine guifg=NONE ctermfg=NONE guibg=#305050 ctermbg=238 gui=NONE cterm=NONE
