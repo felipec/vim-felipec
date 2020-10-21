@@ -111,5 +111,7 @@ highlights:
   QuickFixLine: '- bg_cyan'
   ToolbarLine: '. darkgray'
   ToolbarButton: 'suvagray - r'
+  debugPc: '- bg_cyan'
+  debugBreakpoint: 'red - r'
 
 terminal: 'bg red green yellow blue magenta cyan silver gray red green yellow blue magenta cyan fg'
