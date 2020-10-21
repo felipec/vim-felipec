@@ -74,3 +74,5 @@ hi StatusLineNC guifg=#333333 ctermfg=236 guibg=#808080 ctermbg=244 gui=reverse 
 hi VertSplit guifg=#333333 ctermfg=236 guibg=#efefef ctermbg=255 gui=reverse cterm=reverse
 hi ColorColumn guifg=NONE ctermfg=NONE guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
 hi QuickFixLine guifg=NONE ctermfg=NONE guibg=#305050 ctermbg=238 gui=NONE cterm=NONE
+
+let g:terminal_ansi_colors = [ '#101010', '#ff8080', '#80ff80', '#ffff80', '#8080ff', '#ff80ff', '#80ffff', '#bfbfbf', '#808080', '#ff8080', '#80ff80', '#ffff80', '#8080ff', '#ff80ff', '#80ffff', '#efefef' ]
