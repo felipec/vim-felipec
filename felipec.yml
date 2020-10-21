@@ -109,3 +109,5 @@ highlights:
   VertSplit: 'darkgray fg r'
   ColorColumn: '- darkgray'
   QuickFixLine: '- bg_cyan'
+
+terminal: 'bg red green yellow blue magenta cyan silver gray red green yellow blue magenta cyan fg'
