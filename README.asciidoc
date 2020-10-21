@@ -21,12 +21,14 @@ image:https://i.imgur.com/nbiBtEd.png[Color palette]
 
 Install with your favorite plugin manager.
 
+[source,sh]
 --------------------------------------
 git clone https://github.com/felipec/vim-felipec.git ~/.vim/pack/colors/start/felipec
 --------------------------------------
 
 Then in your `.vimrc`:
 
+[source,vim]
 --------------------------------------
 colorscheme felipec
 let g:lightline = { 'colorscheme': 'felipec' }
@@ -42,6 +44,7 @@ The highlights follow the same format as
 https://github.com/jacoborus/estilo/blob/master/docs/colorschemes.md[estilo]:
 `Title: foreground background style`.
 
+[source,yaml]
 --------------------------------------
 information:
   name: hello
@@ -59,6 +62,7 @@ highlights:
 The generator will automatically create the corresponding cterm parameters with the corresponding
 256 Xterm color.
 
+[source,vim]
 --------------------------------------
 hi Normal guifg=#ffffff ctermfg=231 guibg=#000000 ctermbg=16 gui=NONE cterm=NONE
 --------------------------------------
@@ -68,6 +72,7 @@ eiter with `'hsl(h, s, l)'` or simply `[h, s, l]`.
 
 To create the six basic luminance colors:
 
+[source,yaml]
 --------------------------------------
 palette:
   red: [0, 100, 75]
