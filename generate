@@ -79,7 +79,7 @@ def hsl_to_rgb(h, s, l)
     r, g, b = r + m, g + m, b + m
   end
 
-  return [r, g, b].map { |e| (e * 255).round }
+  return [r, g, b].map { |e| e * 255 }
 end
 
 def get_color(color)
@@ -121,6 +121,7 @@ class Highlight
     return {} if kind == 'sp' and !color
     if color and color != '-'
       rgb = get_color(color)
+      rgb.map!(&:round)
       color = rgb_to_hex(*rgb)
       c_color = rgb_to_x256(*rgb)
     else
