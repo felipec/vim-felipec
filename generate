@@ -7,6 +7,7 @@ $data = YAML.load(ARGF, symbolize_names: true)
 $information = $data[:information]
 $palette = $data[:palette]
 $highlights = $data[:highlights]
+$terminal = $data[:terminal]
 
 def error(message)
   $stderr.puts message
@@ -168,3 +169,14 @@ let g:colors_name='#{$information[:name]}'
 EOL
 
 puts $highlights
+
+colors = $terminal&.split(' ') || []
+
+exit unless colors.size == 16
+
+colors.map! do |e|
+  rgb = get_color(e).map(&:round)
+  "'%s'" % rgb_to_hex(*rgb)
+end
+
+puts "\nlet g:terminal_ansi_colors = [ %s ]" % colors.join(', ')
