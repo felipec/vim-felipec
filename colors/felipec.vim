@@ -76,5 +76,7 @@ hi ColorColumn guifg=NONE ctermfg=NONE guibg=#333333 ctermbg=236 gui=NONE cterm=
 hi QuickFixLine guifg=NONE ctermfg=NONE guibg=#305050 ctermbg=238 gui=NONE cterm=NONE
 hi ToolbarLine guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
 hi ToolbarButton guifg=#8f8f8f ctermfg=246 guibg=NONE ctermbg=NONE gui=reverse cterm=reverse
+hi debugPc guifg=NONE ctermfg=NONE guibg=#305050 ctermbg=238 gui=NONE cterm=NONE
+hi debugBreakpoint guifg=#ff8080 ctermfg=210 guibg=NONE ctermbg=NONE gui=reverse cterm=reverse
 
 let g:terminal_ansi_colors = [ '#101010', '#ff8080', '#80ff80', '#ffff80', '#8080ff', '#ff80ff', '#80ffff', '#bfbfbf', '#808080', '#ff8080', '#80ff80', '#ffff80', '#8080ff', '#ff80ff', '#80ffff', '#efefef' ]
