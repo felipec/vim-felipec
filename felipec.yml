@@ -109,5 +109,7 @@ highlights:
   VertSplit: 'darkgray fg r'
   ColorColumn: '- darkgray'
   QuickFixLine: '- bg_cyan'
+  ToolbarLine: '. darkgray'
+  ToolbarButton: 'suvagray - r'
 
 terminal: 'bg red green yellow blue magenta cyan silver gray red green yellow blue magenta cyan fg'
