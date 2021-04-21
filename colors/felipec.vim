@@ -56,8 +56,7 @@ hi SpellRare guisp=#ff80ff
 hi SpellLocal guisp=#80ffff
 hi diffAdded guifg=#80ff80 ctermfg=120 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi diffRemoved guifg=#ff8080 ctermfg=210 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi diffFileId guifg=#8080ff ctermfg=105 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
-hi diffFile guifg=#808080 ctermfg=244 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi diffFile guifg=#8080ff ctermfg=105 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
 hi diffNewFile guifg=#80ff80 ctermfg=120 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi diffOldFile guifg=#ff8080 ctermfg=210 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi rubyArrayDelimiter guifg=#80bfff ctermfg=111 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
