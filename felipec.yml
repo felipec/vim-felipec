@@ -89,8 +89,7 @@ highlights:
 
   diffAdded: 'green'
   diffRemoved: 'red'
-  diffFileId: 'blue - br'
-  diffFile: 'gray'
+  diffFile: 'blue - br'
   diffNewFile: 'green'
   diffOldFile: 'red'
 
