@@ -1,0 +1,26 @@
+information:
+  name: FelipeC
+
+palette:
+  fg: [0, 0, 93.75]
+  bg: [0, 0, 6.25]
+
+  black: [0, 0, 0]
+  gray: [0, 0, 50]
+  silver: [0, 0, 75]
+
+  red: [0, 100, 75]
+  orange: [30, 100, 75]
+  yellow: [60, 100, 75]
+  sulu: [90, 100, 75]
+  green: [120, 100, 75]
+  aquamarine: [150, 100, 75]
+  cyan: [180, 100, 75]
+  azure: [210, 100, 75]
+  blue: [240, 100, 75]
+  purple: [270, 100, 75]
+  magenta: [300, 100, 75]
+  hotpink: [330, 100, 75]
+
+terminal: 'black red green yellow blue magenta cyan silver gray red green yellow blue magenta cyan fg'
+activity: 'blue'
