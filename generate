@@ -8,6 +8,7 @@ $terminal = $data[:terminal]
 
 # From tmux
 def rgb_to_x256(*orig)
+  orig.map!(&:round)
   values = [0x00, 0x5f, 0x87, 0xaf, 0xd7, 0xff]
 
   ir, ig, ib = orig.map do |e|
@@ -50,7 +51,6 @@ class Highlight
     return {} if kind == 'sp' and !color
     if color and color != '-'
       rgb = get_color(color)
-      rgb.map!(&:round)
       color = rgb_to_hex(*rgb)
       c_color = rgb_to_x256(*rgb)
     else
@@ -103,8 +103,7 @@ colors = $terminal&.split(' ') || []
 exit unless colors.size == 16
 
 colors.map! do |e|
-  rgb = get_color(e).map(&:round)
-  "'%s'" % rgb_to_hex(*rgb)
+  "'%s'" % rgb_to_hex(*get_color(e))
 end
 
 puts "\nlet g:terminal_ansi_colors = [ %s ]" % colors.join(', ')

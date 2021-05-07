@@ -7,7 +7,7 @@ def hex_to_rgb(hex)
 end
 
 def rgb_to_hex(red, green, blue)
-  rgb = (red << 16) | (green << 8) | (blue << 0)
+  rgb = (red.round << 16) | (green.round << 8) | (blue.round << 0)
   return '#' + (0x1000000 + rgb).to_s(16)[1..-1]
 end
 
