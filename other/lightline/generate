@@ -3,7 +3,7 @@
 require_relative '../../lib/colors'
 require_relative '../../lib/util'
 
-colors = %w[fg bg silver suvagray gray darkgray blue green red yellow magenta]
+colors = %w[fg bg silver suvagray gray darkgray blue red yellow magenta]
 colors += %w[insert_silver insert_suvagray insert_darkgray]
 
 colors.each do |color|
