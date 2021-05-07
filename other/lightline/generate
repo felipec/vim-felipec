@@ -7,52 +7,55 @@ def hi_color(color)
   rgb = get_color_rgb(color)
   hex = rgb_to_hex(*rgb)
   code = rgb_to_x256(*rgb)
-  '[ %s, %s ]' % [hex.dump, code]
+  [hex.dump, code]
 end
 
 def hi(conf)
   fg, bg, style = conf.split(' ')
-  params = []
-  params << hi_color(fg)
-  params << hi_color(bg)
+  params = [hi_color(fg), hi_color(bg)].transpose.flatten
   params << style.dump if style
   '[ %s ]' % params.join(', ')
 end
 
-def element(*conf)
+def component(*conf)
   '[ %s ]' % conf.map { |e| hi(e) }.join(', ')
 end
 
 puts <<EOL
 if exists('g:lightline')
 
-  let s:p = { 'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {} }
-
-  let s:p.normal.left = #{element('darkgray blue bold', 'fg darkgray')}
-  let s:p.normal.middle = #{element('suvagray darkgray')}
-  let s:p.normal.right = #{element('darkgray silver', 'darkgray suvagray', 'silver darkgray')}
-  let s:p.normal.error = #{element('darkgray red')}
-  let s:p.normal.warning = #{element('darkgray yellow')}
-
-  let s:p.inactive.left = #{element('suvagray darkgray bold', 'suvagray darkgray')}
-  let s:p.inactive.right = #{element('bg gray', 'suvagray darkgray')}
-
-  let s:p.insert.left = #{element('insert_darkgray fg bold', 'fg insert_darkgray')}
-  let s:p.insert.middle = #{element('insert_silver insert_darkgray')}
-  let s:p.insert.right = #{element('darkgray insert_silver', 'darkgray insert_suvagray', 'silver insert_darkgray')}
-
-  let s:p.replace.left = #{element('darkgray red bold', 'fg darkgray')}
-  let s:p.replace.middle = copy(s:p.normal.middle)
-  let s:p.replace.right = copy(s:p.normal.right)
-
-  let s:p.visual.left = #{element('darkgray magenta bold', 'fg darkgray')}
-
-  let s:p.tabline.left = #{element('suvagray darkgray')}
-  let s:p.tabline.tabsel = #{element('bg gray')}
-  let s:p.tabline.middle = #{element('suvagray darkgray')}
-  let s:p.tabline.right = #{element('suvagray darkgray')}
-
-  let g:lightline#colorscheme#felipec#palette = lightline#colorscheme#flatten(s:p)
+  let g:lightline#colorscheme#felipec#palette = {
+  \\   'normal': {
+  \\     'left': #{component('darkgray blue bold', 'fg darkgray')},
+  \\     'middle': #{component('suvagray darkgray')},
+  \\     'right': #{component('darkgray silver', 'darkgray suvagray', 'silver darkgray')},
+  \\     'error': #{component('darkgray red')},
+  \\     'warning': #{component('darkgray yellow')},
+  \\   },
+  \\   'inactive': {
+  \\     'left': #{component('suvagray darkgray bold', 'suvagray darkgray')},
+  \\     'right': #{component('bg gray', 'suvagray darkgray')},
+  \\   },
+  \\   'insert': {
+  \\     'left': #{component('insert_darkgray fg bold', 'fg insert_darkgray')},
+  \\     'middle': #{component('insert_silver insert_darkgray')},
+  \\     'right': #{component('darkgray insert_silver', 'darkgray insert_suvagray', 'silver insert_darkgray')},
+  \\   },
+  \\   'replace': {
+  \\     'left': #{component('darkgray red bold', 'fg darkgray')},
+  \\     'middle': #{component('suvagray darkgray')},
+  \\     'right': #{component('darkgray silver', 'darkgray suvagray', 'silver darkgray')},
+  \\   },
+  \\   'visual': {
+  \\     'left': #{component('darkgray magenta bold', 'fg darkgray')},
+  \\   },
+  \\   'tabline': {
+  \\     'left': #{component('suvagray darkgray')},
+  \\     'tabsel': #{component('bg gray')},
+  \\     'middle': #{component('suvagray darkgray')},
+  \\     'right': #{component('suvagray darkgray')},
+  \\   },
+  \\ }
 
 endif
 EOL
