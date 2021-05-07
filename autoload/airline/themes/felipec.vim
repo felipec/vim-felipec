@@ -1,0 +1,40 @@
+let g:airline#themes#felipec#palette = {
+  \   "normal": {
+  \     "airline_a": [ "#333333", "#8080ff", 237, 105 ],
+  \     "airline_b": [ "#efefef", "#333333", 255, 237 ],
+  \     "airline_c": [ "#8f8f8f", "#333333", 246, 237 ],
+  \     "airline_x": [ "#bfbfbf", "#333333", 251, 237 ],
+  \     "airline_y": [ "#333333", "#8f8f8f", 237, 246 ],
+  \     "airline_z": [ "#333333", "#bfbfbf", 237, 251 ],
+  \     "airline_error": [ "#333333", "#ff8080", 237, 210 ],
+  \     "airline_warning": [ "#333333", "#ffff80", 237, 228 ],
+  \   },
+  \   "inactive": {
+  \     "airline_a": [ "#8f8f8f", "#333333", 246, 237, "bold" ],
+  \     "airline_x": [ "#8f8f8f", "#333333", 246, 237 ],
+  \     "airline_y": [ "#8f8f8f", "#333333", 246, 237 ],
+  \     "airline_z": [ "#101010", "#808080", 233, 244 ],
+  \     "airline_error": [ "#333333", "#ff8080", 237, 210 ],
+  \     "airline_warning": [ "#333333", "#ffff80", 237, 228 ],
+  \   },
+  \   "insert": {
+  \     "airline_a": [ "#1a4d4d", "#efefef", 23, 255, "bold" ],
+  \     "airline_b": [ "#efefef", "#1a4d4d", 255, 23 ],
+  \     "airline_c": [ "#58c7c7", "#1a4d4d", 80, 23 ],
+  \     "airline_x": [ "#bfbfbf", "#1a4d4d", 251, 23 ],
+  \     "airline_y": [ "#333333", "#58c7c7", 237, 80 ],
+  \     "airline_z": [ "#333333", "#9fdfdf", 237, 152 ],
+  \     "airline_error": [ "#333333", "#ff8080", 237, 210 ],
+  \     "airline_warning": [ "#333333", "#ffff80", 237, 228 ],
+  \   },
+  \   "replace": {
+  \     "airline_a": [ "#333333", "#ff8080", 237, 210, "bold" ],
+  \     "airline_error": [ "#333333", "#ff8080", 237, 210 ],
+  \     "airline_warning": [ "#333333", "#ffff80", 237, 228 ],
+  \   },
+  \   "visual": {
+  \     "airline_a": [ "#333333", "#ff80ff", 237, 213, "bold" ],
+  \     "airline_error": [ "#333333", "#ff8080", 237, 210 ],
+  \     "airline_warning": [ "#333333", "#ffff80", 237, 228 ],
+  \   },
+\ }

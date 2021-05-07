@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+
+require_relative '../../lib/colors'
+require_relative '../../lib/util'
+
+def hi_color(color)
+  rgb = get_color_rgb(color)
+  hex = rgb_to_hex(*rgb)
+  code = rgb_to_x256(*rgb)
+  [hex.dump, code]
+end
+
+def hi(conf)
+  fg, bg, style = conf.split(' ')
+  params = [hi_color(fg), hi_color(bg)].transpose.flatten
+  params << style.dump if style
+  '[ %s ]' % params.join(', ')
+end
+
+def remap(conf)
+  new = []
+  if conf.has_key?(:left)
+    new += conf[:left].map.with_index { |e,i| [%i[a b c][i], e] }
+    conf.delete(:left)
+  end
+  if conf.has_key?(:right)
+    new += conf[:right].map.with_index { |e,i| [%i[x y z][i], e] }
+    conf.delete(:right)
+  end
+  new += conf.to_a
+  new.map { |k,v| [ 'airline_%s' % k, v ] }.to_h
+end
+
+def component(conf)
+  '{ %s }' % remap(conf).map { |k,v| '%s: %s' % [k.dump, hi(*v)] }.join(', ')
+end
+
+$output = []
+
+$data[:modes].each do |name, mode|
+  $output << '  %s: {' % name.to_s.dump
+  remap(mode).map do |name, value|
+    $output << '    %s: %s,' % [name.to_s.dump, hi(*value)]
+  end
+  $output << '  },'
+end
+
+puts <<EOL
+let g:airline#themes##{$name}#palette = {
+#{$output.map { |e| '  \\ ' + e }.join("\n")}
+\\ }
+EOL

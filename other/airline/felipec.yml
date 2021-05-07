@@ -1,0 +1,53 @@
+information:
+  name: felipec
+
+palette:
+  fg: [0, 0, 93.75]
+  bg: [0, 0, 6.25]
+
+  silver: [0, 0, 75]
+  suvagray: [0, 0, 56.25]
+  gray: [0, 0, 50]
+  darkgray: [0, 0, 20]
+
+  red: [0, 100, 75]
+  orange: [30, 100, 75]
+  yellow: [60, 100, 75]
+  sulu: [90, 100, 75]
+  green: [120, 100, 75]
+  aquamarine: [150, 100, 75]
+  cyan: [180, 100, 75]
+  azure: [210, 100, 75]
+  blue: [240, 100, 75]
+  purple: [270, 100, 75]
+  magenta: [300, 100, 75]
+  hotpink: [330, 100, 75]
+
+  insert_silver: [180, 50, 75]
+  insert_suvagray: [180, 50, 56.25]
+  insert_darkgray: [180, 50, 20]
+
+modes:
+  normal:
+    left: [ 'darkgray blue', 'fg darkgray', 'suvagray darkgray' ]
+    right: [ 'silver darkgray', 'darkgray suvagray', 'darkgray silver' ]
+    error: [ 'darkgray red' ]
+    warning: [ 'darkgray yellow' ]
+  inactive:
+    left: [ 'suvagray darkgray bold', ]
+    right: [ 'suvagray darkgray', 'suvagray darkgray', 'bg gray' ]
+    error: [ 'darkgray red' ]
+    warning: [ 'darkgray yellow' ]
+  insert:
+    left: [ 'insert_darkgray fg bold', 'fg insert_darkgray', 'insert_suvagray insert_darkgray' ]
+    right: [ 'silver insert_darkgray', 'darkgray insert_suvagray', 'darkgray insert_silver' ]
+    error: [ 'darkgray red' ]
+    warning: [ 'darkgray yellow' ]
+  replace:
+    left: [ 'darkgray red bold' ]
+    error: [ 'darkgray red' ]
+    warning: [ 'darkgray yellow' ]
+  visual:
+    left: [ 'darkgray magenta bold' ]
+    error: [ 'darkgray red' ]
+    warning: [ 'darkgray yellow' ]
