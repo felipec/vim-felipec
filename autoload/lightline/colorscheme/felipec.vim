@@ -2,15 +2,15 @@ if exists('g:lightline')
 
   let s:fg = [ '#efefef', 255 ]
   let s:bg = [ '#101010', 233 ]
-  let s:darkgray = [ '#333333', 236 ]
+  let s:darkgray = [ '#333333', 237 ]
   let s:suvagray = [ '#8f8f8f', 246 ]
   let s:gray = [ '#808080', 244 ]
-  let s:silver = [ '#bfbfbf', 250 ]
+  let s:silver = [ '#bfbfbf', 251 ]
 
   let s:blue = [ '#8080ff', 105 ]
   let s:green = [ '#80ff80', 120 ]
   let s:red = [ '#ff8080', 210 ]
-  let s:yellow = [ '#ffff80', 229 ]
+  let s:yellow = [ '#ffff80', 228 ]
   let s:magenta = [ '#ff80ff', 213 ]
 
   let s:insert_silver = [ '#9fdfdf', 152 ]
