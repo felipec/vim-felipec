@@ -3,15 +3,24 @@
 require_relative '../../lib/colors'
 require_relative '../../lib/util'
 
-colors = %w[fg bg silver suvagray gray darkgray blue red yellow magenta]
-colors += %w[insert_silver insert_suvagray insert_darkgray]
-
-colors.each do |color|
+def hi_color(color)
   rgb = get_color_rgb(color)
   hex = rgb_to_hex(*rgb)
   code = rgb_to_x256(*rgb)
-  value = "[ '%s', %i ]" % [ hex, code]
-  eval "$#{color} = #{value.dump}"
+  '[ %s, %s ]' % [hex.dump, code]
+end
+
+def hi(conf)
+  fg, bg, style = conf.split(' ')
+  params = []
+  params << hi_color(fg)
+  params << hi_color(bg)
+  params << style.dump if style
+  '[ %s ]' % params.join(', ')
+end
+
+def element(*conf)
+  '[ %s ]' % conf.map { |e| hi(e) }.join(', ')
 end
 
 puts <<EOL
@@ -19,29 +28,29 @@ if exists('g:lightline')
 
   let s:p = { 'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {} }
 
-  let s:p.normal.left = [ [ #{$darkgray}, #{$blue}, 'bold' ], [ #{$fg}, #{$darkgray} ] ]
-  let s:p.normal.middle = [ [ #{$suvagray}, #{$darkgray} ] ]
-  let s:p.normal.right = [ [ #{$darkgray}, #{$silver} ], [ #{$darkgray}, #{$suvagray} ], [ #{$silver}, #{$darkgray} ] ]
-  let s:p.normal.error = [ [ #{$darkgray}, #{$red} ] ]
-  let s:p.normal.warning = [ [ #{$darkgray}, #{$yellow} ] ]
+  let s:p.normal.left = #{element('darkgray blue bold', 'fg darkgray')}
+  let s:p.normal.middle = #{element('suvagray darkgray')}
+  let s:p.normal.right = #{element('darkgray silver', 'darkgray suvagray', 'silver darkgray')}
+  let s:p.normal.error = #{element('darkgray red')}
+  let s:p.normal.warning = #{element('darkgray yellow')}
 
-  let s:p.inactive.left = [ [ #{$suvagray}, #{$darkgray}, 'bold' ], [ #{$suvagray}, #{$darkgray} ] ]
-  let s:p.inactive.right = [ [ #{$bg}, #{$gray} ], [ #{$suvagray}, #{$darkgray} ] ]
+  let s:p.inactive.left = #{element('suvagray darkgray bold', 'suvagray darkgray')}
+  let s:p.inactive.right = #{element('bg gray', 'suvagray darkgray')}
 
-  let s:p.insert.left = [ [ #{$insert_darkgray}, #{$fg}, 'bold' ], [ #{$fg}, #{$insert_darkgray} ] ]
-  let s:p.insert.middle = [ [ #{$insert_silver}, #{$insert_darkgray} ] ]
-  let s:p.insert.right = [ [ #{$darkgray}, #{$insert_silver} ], [ #{$darkgray}, #{$insert_suvagray} ], [ #{$silver}, #{$insert_darkgray} ] ]
+  let s:p.insert.left = #{element('insert_darkgray fg bold', 'fg insert_darkgray')}
+  let s:p.insert.middle = #{element('insert_silver insert_darkgray')}
+  let s:p.insert.right = #{element('darkgray insert_silver', 'darkgray insert_suvagray', 'silver insert_darkgray')}
 
-  let s:p.replace.left = [ [ #{$darkgray}, #{$red}, 'bold' ], [ #{$fg}, #{$darkgray} ] ]
+  let s:p.replace.left = #{element('darkgray red bold', 'fg darkgray')}
   let s:p.replace.middle = copy(s:p.normal.middle)
   let s:p.replace.right = copy(s:p.normal.right)
 
-  let s:p.visual.left = [ [ #{$darkgray}, #{$magenta}, 'bold' ], [ #{$fg}, #{$darkgray} ] ]
+  let s:p.visual.left = #{element('darkgray magenta bold', 'fg darkgray')}
 
-  let s:p.tabline.left = [ [ #{$suvagray}, #{$darkgray} ] ]
-  let s:p.tabline.tabsel = [ [ #{$bg}, #{$gray} ] ]
-  let s:p.tabline.middle = [ [ #{$suvagray}, #{$darkgray} ] ]
-  let s:p.tabline.right = [ [ #{$suvagray}, #{$darkgray} ] ]
+  let s:p.tabline.left = #{element('suvagray darkgray')}
+  let s:p.tabline.tabsel = #{element('bg gray')}
+  let s:p.tabline.middle = #{element('suvagray darkgray')}
+  let s:p.tabline.right = #{element('suvagray darkgray')}
 
   let g:lightline#colorscheme#felipec#palette = lightline#colorscheme#flatten(s:p)
 
