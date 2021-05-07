@@ -1,31 +1,36 @@
 if exists('g:lightline')
 
-  let s:p = { 'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {} }
-
-  let s:p.normal.left = [ [ [ '#333333', 237 ], [ '#8080ff', 105 ], 'bold' ], [ [ '#efefef', 255 ], [ '#333333', 237 ] ] ]
-  let s:p.normal.middle = [ [ [ '#8f8f8f', 246 ], [ '#333333', 237 ] ] ]
-  let s:p.normal.right = [ [ [ '#333333', 237 ], [ '#bfbfbf', 251 ] ], [ [ '#333333', 237 ], [ '#8f8f8f', 246 ] ], [ [ '#bfbfbf', 251 ], [ '#333333', 237 ] ] ]
-  let s:p.normal.error = [ [ [ '#333333', 237 ], [ '#ff8080', 210 ] ] ]
-  let s:p.normal.warning = [ [ [ '#333333', 237 ], [ '#ffff80', 228 ] ] ]
-
-  let s:p.inactive.left = [ [ [ '#8f8f8f', 246 ], [ '#333333', 237 ], 'bold' ], [ [ '#8f8f8f', 246 ], [ '#333333', 237 ] ] ]
-  let s:p.inactive.right = [ [ [ '#101010', 233 ], [ '#808080', 244 ] ], [ [ '#8f8f8f', 246 ], [ '#333333', 237 ] ] ]
-
-  let s:p.insert.left = [ [ [ '#1a4d4d', 23 ], [ '#efefef', 255 ], 'bold' ], [ [ '#efefef', 255 ], [ '#1a4d4d', 23 ] ] ]
-  let s:p.insert.middle = [ [ [ '#9fdfdf', 152 ], [ '#1a4d4d', 23 ] ] ]
-  let s:p.insert.right = [ [ [ '#333333', 237 ], [ '#9fdfdf', 152 ] ], [ [ '#333333', 237 ], [ '#58c7c7', 80 ] ], [ [ '#bfbfbf', 251 ], [ '#1a4d4d', 23 ] ] ]
-
-  let s:p.replace.left = [ [ [ '#333333', 237 ], [ '#ff8080', 210 ], 'bold' ], [ [ '#efefef', 255 ], [ '#333333', 237 ] ] ]
-  let s:p.replace.middle = copy(s:p.normal.middle)
-  let s:p.replace.right = copy(s:p.normal.right)
-
-  let s:p.visual.left = [ [ [ '#333333', 237 ], [ '#ff80ff', 213 ], 'bold' ], [ [ '#efefef', 255 ], [ '#333333', 237 ] ] ]
-
-  let s:p.tabline.left = [ [ [ '#8f8f8f', 246 ], [ '#333333', 237 ] ] ]
-  let s:p.tabline.tabsel = [ [ [ '#101010', 233 ], [ '#808080', 244 ] ] ]
-  let s:p.tabline.middle = [ [ [ '#8f8f8f', 246 ], [ '#333333', 237 ] ] ]
-  let s:p.tabline.right = [ [ [ '#8f8f8f', 246 ], [ '#333333', 237 ] ] ]
-
-  let g:lightline#colorscheme#felipec#palette = lightline#colorscheme#flatten(s:p)
+  let g:lightline#colorscheme#felipec#palette = {
+  \   'normal': {
+  \     'left': [ [ "#333333", "#8080ff", 237, 105, "bold" ], [ "#efefef", "#333333", 255, 237 ] ],
+  \     'middle': [ [ "#8f8f8f", "#333333", 246, 237 ] ],
+  \     'right': [ [ "#333333", "#bfbfbf", 237, 251 ], [ "#333333", "#8f8f8f", 237, 246 ], [ "#bfbfbf", "#333333", 251, 237 ] ],
+  \     'error': [ [ "#333333", "#ff8080", 237, 210 ] ],
+  \     'warning': [ [ "#333333", "#ffff80", 237, 228 ] ],
+  \   },
+  \   'inactive': {
+  \     'left': [ [ "#8f8f8f", "#333333", 246, 237, "bold" ], [ "#8f8f8f", "#333333", 246, 237 ] ],
+  \     'right': [ [ "#101010", "#808080", 233, 244 ], [ "#8f8f8f", "#333333", 246, 237 ] ],
+  \   },
+  \   'insert': {
+  \     'left': [ [ "#1a4d4d", "#efefef", 23, 255, "bold" ], [ "#efefef", "#1a4d4d", 255, 23 ] ],
+  \     'middle': [ [ "#58c7c7", "#1a4d4d", 80, 23 ] ],
+  \     'right': [ [ "#333333", "#9fdfdf", 237, 152 ], [ "#333333", "#58c7c7", 237, 80 ], [ "#bfbfbf", "#1a4d4d", 251, 23 ] ],
+  \   },
+  \   'replace': {
+  \     'left': [ [ "#333333", "#ff8080", 237, 210, "bold" ], [ "#efefef", "#333333", 255, 237 ] ],
+  \     'middle': [ [ "#8f8f8f", "#333333", 246, 237 ] ],
+  \     'right': [ [ "#333333", "#bfbfbf", 237, 251 ], [ "#333333", "#8f8f8f", 237, 246 ], [ "#bfbfbf", "#333333", 251, 237 ] ],
+  \   },
+  \   'visual': {
+  \     'left': [ [ "#333333", "#ff80ff", 237, 213, "bold" ], [ "#efefef", "#333333", 255, 237 ] ],
+  \   },
+  \   'tabline': {
+  \     'left': [ [ "#8f8f8f", "#333333", 246, 237 ] ],
+  \     'middle': [ [ "#8f8f8f", "#333333", 246, 237 ] ],
+  \     'right': [ [ "#8f8f8f", "#333333", 246, 237 ] ],
+  \     'tabsel': [ [ "#101010", "#808080", 233, 244 ] ],
+  \   },
+  \ }
 
 endif
