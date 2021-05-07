@@ -33,7 +33,7 @@ end
 puts <<EOL
 if exists('g:lightline')
 
-  let g:lightline#colorscheme#felipec#palette = {
+  let g:lightline#colorscheme##{$name}#palette = {
 #{$output.map { |e| '  \\ ' + e }.join("\n")}
   \\ }
 
