@@ -23,3 +23,29 @@ palette:
   insert_silver: [180, 50, 75]
   insert_suvagray: [180, 50, 56.25]
   insert_darkgray: [180, 50, 20]
+
+modes:
+  normal:
+    left: [ 'darkgray blue bold', 'fg darkgray' ]
+    middle: [ 'suvagray darkgray' ]
+    right: [ 'darkgray silver', 'darkgray suvagray', 'silver darkgray' ]
+    error: [ 'darkgray red' ]
+    warning: [ 'darkgray yellow' ]
+  inactive:
+    left: [ 'suvagray darkgray bold', 'suvagray darkgray' ]
+    right: [ 'bg gray', 'suvagray darkgray' ]
+  insert:
+    left: [ 'insert_darkgray fg bold', 'fg insert_darkgray' ]
+    middle: [ 'insert_suvagray insert_darkgray' ]
+    right: [ 'darkgray insert_silver', 'darkgray insert_suvagray', 'silver insert_darkgray' ]
+  replace:
+    left: [ 'darkgray red bold', 'fg darkgray' ]
+    middle: [ 'suvagray darkgray' ]
+    right: [ 'darkgray silver', 'darkgray suvagray', 'silver darkgray' ]
+  visual:
+    left: [ 'darkgray magenta bold', 'fg darkgray' ]
+  tabline:
+    left: [ 'suvagray darkgray' ]
+    middle: [ 'suvagray darkgray' ]
+    right: [ 'suvagray darkgray' ]
+    tabsel: [ 'bg gray' ]

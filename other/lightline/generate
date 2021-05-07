@@ -21,40 +21,20 @@ def component(*conf)
   '[ %s ]' % conf.map { |e| hi(e) }.join(', ')
 end
 
+$output = []
+$data[:modes].each do |name, mode|
+  $output << '  %s: {' % name.to_s.dump
+  mode.map do |name, value|
+    $output << '    %s: %s,' % [name.to_s.dump, component(*value)]
+  end
+  $output << '  },'
+end
+
 puts <<EOL
 if exists('g:lightline')
 
   let g:lightline#colorscheme#felipec#palette = {
-  \\   'normal': {
-  \\     'left': #{component('darkgray blue bold', 'fg darkgray')},
-  \\     'middle': #{component('suvagray darkgray')},
-  \\     'right': #{component('darkgray silver', 'darkgray suvagray', 'silver darkgray')},
-  \\     'error': #{component('darkgray red')},
-  \\     'warning': #{component('darkgray yellow')},
-  \\   },
-  \\   'inactive': {
-  \\     'left': #{component('suvagray darkgray bold', 'suvagray darkgray')},
-  \\     'right': #{component('bg gray', 'suvagray darkgray')},
-  \\   },
-  \\   'insert': {
-  \\     'left': #{component('insert_darkgray fg bold', 'fg insert_darkgray')},
-  \\     'middle': #{component('insert_suvagray insert_darkgray')},
-  \\     'right': #{component('darkgray insert_silver', 'darkgray insert_suvagray', 'silver insert_darkgray')},
-  \\   },
-  \\   'replace': {
-  \\     'left': #{component('darkgray red bold', 'fg darkgray')},
-  \\     'middle': #{component('suvagray darkgray')},
-  \\     'right': #{component('darkgray silver', 'darkgray suvagray', 'silver darkgray')},
-  \\   },
-  \\   'visual': {
-  \\     'left': #{component('darkgray magenta bold', 'fg darkgray')},
-  \\   },
-  \\   'tabline': {
-  \\     'left': #{component('suvagray darkgray')},
-  \\     'middle': #{component('suvagray darkgray')},
-  \\     'right': #{component('suvagray darkgray')},
-  \\     'tabsel': #{component('bg gray')},
-  \\   },
+#{$output.map { |e| '  \\ ' + e }.join("\n")}
   \\ }
 
 endif
