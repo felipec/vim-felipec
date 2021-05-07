@@ -8,11 +8,10 @@ $terminal = $data[:terminal]
 
 # From tmux
 def rgb_to_x256(*orig)
-  orig.map!(&:round)
   values = [0x00, 0x5f, 0x87, 0xaf, 0xd7, 0xff]
 
   ir, ig, ib = orig.map do |e|
-    e < 48 ? 0 : e < 115 ? 1 : (e - 35) / 40
+    e < 48 ? 0 : e < 115 ? 1 : ((e - 35) / 40).to_i
   end
 
   average = orig.sum / 3
@@ -25,7 +24,7 @@ def rgb_to_x256(*orig)
   color_err = (cr - r) ** 2 + (cg - g) ** 2 + (cb - b) ** 2
   gray_err = (gv - r) ** 2 + (gv - g) ** 2 + (gv - b) ** 2
 
-  color_err <= gray_err ? 16 + color_index : 232 + gray_index
+  color_err <= gray_err ? 16 + color_index : 232 + gray_index.round
 end
 
 class Highlight
