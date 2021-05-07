@@ -49,7 +49,7 @@ class Highlight
     return {} if color == '.'
     return {} if kind == 'sp' and !color
     if color and color != '-'
-      rgb = get_color(color)
+      rgb = get_color_rgb(color)
       color = rgb_to_hex(*rgb)
       c_color = rgb_to_x256(*rgb)
     else
@@ -102,7 +102,7 @@ colors = $terminal&.split(' ') || []
 exit unless colors.size == 16
 
 colors.map! do |e|
-  "'%s'" % rgb_to_hex(*get_color(e))
+  "'%s'" % get_color(e)
 end
 
 puts "\nlet g:terminal_ansi_colors = [ %s ]" % colors.join(', ')

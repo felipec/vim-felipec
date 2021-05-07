@@ -46,7 +46,7 @@ def hsl_to_rgb(h, s, l)
   return [r, g, b].map { |e| e * 255 }
 end
 
-def get_color(color)
+def get_color_rgb(color)
   if color.start_with?('#')
     return hex_to_rgb(color)
   end
@@ -60,4 +60,8 @@ def get_color(color)
     return hsl_to_rgb($1.to_i, $2.to_i, $3.to_i)
   end
   return nil
+end
+
+def get_color(color)
+  rgb_to_hex(*get_color_rgb(color))
 end
