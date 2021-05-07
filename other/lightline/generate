@@ -38,7 +38,7 @@ if exists('g:lightline')
   \\   },
   \\   'insert': {
   \\     'left': #{component('insert_darkgray fg bold', 'fg insert_darkgray')},
-  \\     'middle': #{component('insert_silver insert_darkgray')},
+  \\     'middle': #{component('insert_suvagray insert_darkgray')},
   \\     'right': #{component('darkgray insert_silver', 'darkgray insert_suvagray', 'silver insert_darkgray')},
   \\   },
   \\   'replace': {
@@ -51,9 +51,9 @@ if exists('g:lightline')
   \\   },
   \\   'tabline': {
   \\     'left': #{component('suvagray darkgray')},
-  \\     'tabsel': #{component('bg gray')},
   \\     'middle': #{component('suvagray darkgray')},
   \\     'right': #{component('suvagray darkgray')},
+  \\     'tabsel': #{component('bg gray')},
   \\   },
   \\ }
 
