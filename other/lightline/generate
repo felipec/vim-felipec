@@ -1,0 +1,66 @@
+#!/usr/bin/env ruby
+
+require_relative '../../lib/colors'
+require_relative '../../lib/util'
+
+colors = %w[fg bg silver suvagray gray darkgray blue green red yellow magenta]
+colors += %w[insert_silver insert_suvagray insert_darkgray]
+
+colors.each do |color|
+  rgb = get_color_rgb(color)
+  hex = rgb_to_hex(*rgb)
+  code = rgb_to_x256(*rgb)
+  value = "[ '%s', %i ]" % [ hex, code]
+  eval "$#{color} = #{value.dump}"
+end
+
+puts <<EOL
+if exists('g:lightline')
+
+  let s:fg = #{$fg}
+  let s:bg = #{$bg}
+  let s:darkgray = #{$darkgray}
+  let s:suvagray = #{$suvagray}
+  let s:gray = #{$gray}
+  let s:silver = #{$silver}
+
+  let s:blue = #{$blue}
+  let s:green = #{$green}
+  let s:red = #{$red}
+  let s:yellow = #{$yellow}
+  let s:magenta = #{$magenta}
+
+  let s:insert_silver = #{$insert_silver}
+  let s:insert_suvagray = #{$insert_suvagray}
+  let s:insert_darkgray = #{$insert_darkgray}
+
+  let s:p = { 'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {} }
+
+  let s:p.normal.left = [ [ s:darkgray, s:blue, 'bold' ], [ s:fg, s:darkgray ] ]
+  let s:p.normal.middle = [ [ s:suvagray, s:darkgray ] ]
+  let s:p.normal.right = [ [ s:darkgray, s:silver ], [ s:darkgray, s:suvagray ], [ s:silver, s:darkgray ] ]
+  let s:p.normal.error = [ [ s:darkgray, s:red ] ]
+  let s:p.normal.warning = [ [ s:darkgray, s:yellow ] ]
+
+  let s:p.inactive.left = [ [ s:suvagray, s:darkgray, 'bold' ], [ s:suvagray, s:darkgray ] ]
+  let s:p.inactive.right = [ [ s:bg, s:gray ], [ s:suvagray, s:darkgray ] ]
+
+  let s:p.insert.left = [ [ s:insert_darkgray, s:fg, 'bold' ], [ s:fg, s:insert_darkgray ] ]
+  let s:p.insert.middle = [ [ s:insert_silver, s:insert_darkgray ] ]
+  let s:p.insert.right = [ [ s:darkgray, s:insert_silver ], [ s:darkgray, s:insert_suvagray ], [ s:silver, s:insert_darkgray ] ]
+
+  let s:p.replace.left = [ [ s:darkgray, s:red, 'bold' ], [ s:fg, s:darkgray ] ]
+  let s:p.replace.middle = copy(s:p.normal.middle)
+  let s:p.replace.right = copy(s:p.normal.right)
+
+  let s:p.visual.left = [ [ s:darkgray, s:magenta, 'bold' ], [ s:fg, s:darkgray ] ]
+
+  let s:p.tabline.left = [ [ s:suvagray, s:darkgray ] ]
+  let s:p.tabline.tabsel = [ [ s:bg, s:gray ] ]
+  let s:p.tabline.middle = [ [ s:suvagray, s:darkgray ] ]
+  let s:p.tabline.right = [ [ s:suvagray, s:darkgray ] ]
+
+  let g:lightline#colorscheme#felipec#palette = lightline#colorscheme#flatten(s:p)
+
+endif
+EOL
