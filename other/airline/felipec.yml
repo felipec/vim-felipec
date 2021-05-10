@@ -29,7 +29,7 @@ palette:
 
 modes:
   normal:
-    left: [ 'darkgray blue', 'fg darkgray', 'suvagray darkgray' ]
+    left: [ 'darkgray blue bold', 'fg darkgray', 'suvagray darkgray' ]
     right: [ 'silver darkgray', 'darkgray suvagray', 'darkgray silver' ]
     error: [ 'darkgray red' ]
     warning: [ 'darkgray yellow' ]

@@ -1,6 +1,6 @@
 let g:airline#themes#felipec#palette = {
   \   "normal": {
-  \     "airline_a": [ "#333333", "#8080ff", 237, 105 ],
+  \     "airline_a": [ "#333333", "#8080ff", 237, 105, "bold" ],
   \     "airline_b": [ "#efefef", "#333333", 255, 237 ],
   \     "airline_c": [ "#8f8f8f", "#333333", 246, 237 ],
   \     "airline_x": [ "#bfbfbf", "#333333", 251, 237 ],
