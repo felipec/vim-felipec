@@ -1,6 +1,6 @@
 [Scheme]
 Name=FelipeC
-ColorForeground=#efefef
-ColorBackground=#101010
-TabActivityColor=#8080ff
-ColorPalette=#000000;#ff8080;#80ff80;#ffff80;#8080ff;#ff80ff;#80ffff;#bfbfbf;#808080;#ff8080;#80ff80;#ffff80;#8080ff;#ff80ff;#80ffff;#efefef
+ColorForeground=#dfdfdf
+ColorBackground=#181818
+TabActivityColor=#8f8fef
+ColorPalette=#000000;#ef8f8f;#8fef8f;#efef8f;#8f8fef;#ef8fef;#8fefef;#bfbfbf;#808080;#ef8f8f;#8fef8f;#efef8f;#8f8fef;#ef8fef;#8fefef;#dfdfdf
