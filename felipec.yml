@@ -82,10 +82,10 @@ highlights:
   CursorColumn: '- darkgray'
   CursorLineNr: 'yellow - b'
 
-  SpellBad: '. . . red'
-  SpellCap: '. . . azure'
-  SpellRare: '. . . magenta'
-  SpellLocal: '. . . cyan'
+  SpellBad: 'red - u'
+  SpellCap: 'azure - u'
+  SpellRare: 'magenta - u'
+  SpellLocal: 'cyan - u'
 
   diffAdded: 'green'
   diffRemoved: 'red'
