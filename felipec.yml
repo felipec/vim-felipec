@@ -4,13 +4,13 @@ information:
   author: 'Felipe Contreras <felipe.contreras@gmail.com>'
 
 palette:
-  fg: [0, 0, 87.5]
-  bg: [0, 0, 9.375]
+  fg: [240, 6.25, 87.5]
+  bg: [240, 6.25, 9.375]
 
-  darkgray: [0, 0, 20]
-  gray: [0, 0, 50]
-  suvagray: [0, 0, 56.25]
-  silver: [0, 0, 75]
+  darkgray: [240, 6.25, 20]
+  gray: [240, 6.25, 50]
+  suvagray: [240, 6.25, 56.25]
+  silver: [240, 6.25, 75]
 
   red: [0, 75, 75]
   orange: [30, 75, 75]

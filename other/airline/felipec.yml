@@ -2,13 +2,13 @@ information:
   name: felipec
 
 palette:
-  fg: [0, 0, 87.5]
-  bg: [0, 0, 9.375]
+  fg: [240, 6.25, 87.5]
+  bg: [240, 6.25, 9.375]
 
-  silver: [0, 0, 75]
-  suvagray: [0, 0, 56.25]
-  gray: [0, 0, 50]
-  darkgray: [0, 0, 20]
+  silver: [240, 6.25, 75]
+  suvagray: [240, 6.25, 56.25]
+  gray: [240, 6.25, 50]
+  darkgray: [240, 6.25, 20]
 
   red: [0, 75, 75]
   orange: [30, 75, 75]
