@@ -54,7 +54,7 @@ highlights:
 
   Cursor: '- - r'
   Search: 'hotpink - br'
-  Visual: '- darkgray'
+  Visual: 'purple - r'
   MatchParen: 'red bg_red b'
   NonText: 'darkyellow darkgray'
   SpecialKey: 'orange'
