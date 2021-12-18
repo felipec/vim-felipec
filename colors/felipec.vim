@@ -7,7 +7,7 @@ if exists('syntax_on')
 endif
 let g:colors_name='felipec'
 
-hi Normal guifg=#dddde1 ctermfg=254 guibg=#161619 ctermbg=234 gui=NONE cterm=NONE
+hi Normal guifg=#dddde1 ctermfg=254 guibg=#1e1e22 ctermbg=235 gui=NONE cterm=NONE
 hi Comment guifg=#888896 ctermfg=246 guibg=NONE ctermbg=NONE gui=italic cterm=italic
 hi Todo guifg=#ef8f8f ctermfg=210 guibg=#303036 ctermbg=237 gui=bold,italic cterm=bold,italic
 hi Error guifg=#ef8f8f ctermfg=210 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
@@ -40,7 +40,7 @@ hi DiffDelete guifg=#503030 ctermfg=238 guibg=#503030 ctermbg=238 gui=NONE cterm
 hi DiffChange guifg=NONE ctermfg=NONE guibg=#303050 ctermbg=238 gui=NONE cterm=NONE
 hi DiffText guifg=NONE ctermfg=NONE guibg=#305050 ctermbg=239 gui=NONE cterm=NONE
 hi Folded guifg=#8f8fef ctermfg=105 guibg=#303036 ctermbg=237 gui=italic cterm=italic
-hi FoldColumn guifg=#8f8fef ctermfg=105 guibg=#161619 ctermbg=234 gui=NONE cterm=NONE
+hi FoldColumn guifg=#8f8fef ctermfg=105 guibg=#1e1e22 ctermbg=235 gui=NONE cterm=NONE
 hi Pmenu guifg=#dddde1 ctermfg=254 guibg=#303036 ctermbg=237 gui=NONE cterm=NONE
 hi PmenuSel guifg=#8f8fef ctermfg=105 guibg=#303036 ctermbg=237 gui=bold,reverse cterm=bold,reverse
 hi PmenuSbar guifg=NONE ctermfg=NONE guibg=#303036 ctermbg=237 gui=NONE cterm=NONE
@@ -80,4 +80,4 @@ hi ToolbarButton guifg=#888896 ctermfg=246 guibg=NONE ctermbg=NONE gui=reverse c
 hi debugPc guifg=NONE ctermfg=NONE guibg=#305050 ctermbg=239 gui=NONE cterm=NONE
 hi debugBreakpoint guifg=#ef8f8f ctermfg=210 guibg=NONE ctermbg=NONE gui=reverse cterm=reverse
 
-let g:terminal_ansi_colors = [ '#161619', '#ef8f8f', '#8fef8f', '#efef8f', '#8f8fef', '#ef8fef', '#8fefef', '#bbbbc3', '#787887', '#ef8f8f', '#8fef8f', '#efef8f', '#8f8fef', '#ef8fef', '#8fefef', '#dddde1' ]
+let g:terminal_ansi_colors = [ '#1e1e22', '#ef8f8f', '#8fef8f', '#efef8f', '#8f8fef', '#ef8fef', '#8fefef', '#bbbbc3', '#787887', '#ef8f8f', '#8fef8f', '#efef8f', '#8f8fef', '#ef8fef', '#8fefef', '#dddde1' ]
