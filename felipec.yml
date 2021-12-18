@@ -50,7 +50,7 @@ highlights:
   Function: 'sulu - b'
   String: 'green - i'
   Special: 'orange - i'
-  Underlined: 'cyan . u'
+  Underlined: '. . u'
 
   Cursor: '- - r'
   Search: 'hotpink - br'
