@@ -14,4 +14,9 @@ ColorForeground=#{get_color('fg')}
 ColorBackground=#{get_color('bg')}
 TabActivityColor=#{get_color($data[:activity])}
 ColorPalette=#{$colors.join(';')}
+ColorSelectionUseDefault=FALSE
+ColorSelection=#{get_color('bg')}
+ColorSelectionBackground=#{get_color($data[:selection])}
+ColorCursorUseDefault=FALSE
+ColorCursor=#{get_color($data[:cursor])}
 EOL

@@ -24,3 +24,5 @@ palette:
 
 terminal: 'black red green yellow blue magenta cyan silver gray red green yellow blue magenta cyan fg'
 activity: 'blue'
+selection: 'magenta'
+cursor: 'azure'
