@@ -6,13 +6,12 @@ require_relative '../../lib/util'
 $colors = $data[:terminal].split(' ').map do |e|
   get_color(e)
 end
-$activity = $data[:activity]
 
 puts <<EOL
 [Scheme]
 Name=#{$name}
 ColorForeground=#{get_color('fg')}
 ColorBackground=#{get_color('bg')}
-TabActivityColor=#{get_color($activity)}
+TabActivityColor=#{get_color($data[:activity])}
 ColorPalette=#{$colors.join(';')}
 EOL
