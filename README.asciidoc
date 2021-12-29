@@ -9,9 +9,9 @@ There's also lightline and airline colorschemes.
 
 == Screenshots ==
 
-image:https://i.imgur.com/bDQ7bsK.png[C screenshot]
-image:https://i.imgur.com/jfle9vt.png[JavaScript screenshot]
-image:https://i.imgur.com/GhRrTb9.png[Ruby screenshot]
+image:https://i.imgur.com/d8Xk0QS.png[C screenshot]
+image:https://i.imgur.com/KZR1q61.png[JavaScript screenshot]
+image:https://i.imgur.com/jFtGzuq.png[Ruby screenshot]
 
 == Color palette ==
 
