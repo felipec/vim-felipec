@@ -103,7 +103,7 @@ highlights:
   TabLineFill: ''
   TabLine: 'gray darkgray'
   TabLineSel: 'blue darkgray'
-  StatusLine: 'fg darkgray'
+  StatusLine: 'silver darkgray'
   StatusLineNC: 'gray darkgray'
   StatusLineTerm: 'green darkgray'
   StatusLineTermNC: 'gray darkgray'
