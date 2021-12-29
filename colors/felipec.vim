@@ -68,11 +68,11 @@ hi GitGutterChange guifg=#8f8fef ctermfg=105 guibg=#303036 ctermbg=237 gui=NONE 
 hi TabLineFill guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi TabLine guifg=#787887 ctermfg=244 guibg=#303036 ctermbg=237 gui=NONE cterm=NONE
 hi TabLineSel guifg=#8f8fef ctermfg=105 guibg=#303036 ctermbg=237 gui=NONE cterm=NONE
-hi StatusLine guifg=#303036 ctermfg=237 guibg=#dddde1 ctermbg=254 gui=reverse cterm=reverse
-hi StatusLineNC guifg=#303036 ctermfg=237 guibg=#787887 ctermbg=244 gui=reverse cterm=reverse
-hi StatusLineTerm guifg=#303036 ctermfg=237 guibg=#8fef8f ctermbg=120 gui=reverse cterm=reverse
-hi StatusLineTermNC guifg=#303036 ctermfg=237 guibg=#787887 ctermbg=244 gui=reverse cterm=reverse
-hi VertSplit guifg=#303036 ctermfg=237 guibg=#dddde1 ctermbg=254 gui=reverse cterm=reverse
+hi StatusLine guifg=#bbbbc3 ctermfg=251 guibg=#303036 ctermbg=237 gui=NONE cterm=NONE
+hi StatusLineNC guifg=#787887 ctermfg=244 guibg=#303036 ctermbg=237 gui=NONE cterm=NONE
+hi StatusLineTerm guifg=#8fef8f ctermfg=120 guibg=#303036 ctermbg=237 gui=NONE cterm=NONE
+hi StatusLineTermNC guifg=#787887 ctermfg=244 guibg=#303036 ctermbg=237 gui=NONE cterm=NONE
+hi VertSplit guifg=#dddde1 ctermfg=254 guibg=#303036 ctermbg=237 gui=NONE cterm=NONE
 hi ColorColumn guifg=NONE ctermfg=NONE guibg=#303036 ctermbg=237 gui=NONE cterm=NONE
 hi QuickFixLine guifg=NONE ctermfg=NONE guibg=#305050 ctermbg=239 gui=NONE cterm=NONE
 hi ToolbarLine guibg=#303036 ctermbg=237 gui=NONE cterm=NONE
