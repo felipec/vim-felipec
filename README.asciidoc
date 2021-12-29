@@ -9,13 +9,13 @@ There's also lightline and airline colorschemes.
 
 == Screenshots ==
 
-image:https://i.imgur.com/qhcM3BZ.png[C screenshot]
-image:https://i.imgur.com/QZaabZg.png[JavaScript screenshot]
-image:https://i.imgur.com/RCyFgAi.png[Ruby screenshot]
+image:https://i.imgur.com/bDQ7bsK.png[C screenshot]
+image:https://i.imgur.com/jfle9vt.png[JavaScript screenshot]
+image:https://i.imgur.com/GhRrTb9.png[Ruby screenshot]
 
 == Color palette ==
 
-image:https://i.imgur.com/nbiBtEd.png[Color palette]
+image:https://i.imgur.com/e0GW35t.png[Color palette]
 
 == Installation ==
 
