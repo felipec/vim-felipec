@@ -1,0 +1,59 @@
+information:
+  name: felipec
+
+palette:
+  fg: [240, 6.25, 87.5]
+  bg: [240, 6.25, 12.5]
+
+  suvagray: [240, 6.25, 56.25]
+
+  red: [0, 75, 75]
+  orange: [30, 75, 75]
+  yellow: [60, 75, 75]
+  sulu: [90, 75, 75]
+  green: [120, 75, 75]
+  aquamarine: [150, 75, 75]
+  cyan: [180, 75, 75]
+  azure: [210, 75, 75]
+  blue: [240, 75, 75]
+  purple: [270, 75, 75]
+  magenta: [300, 75, 75]
+  hotpink: [330, 75, 75]
+
+blocks:
+  - - main
+    - color: fg
+      background-color: bg
+  - - selection
+    - color: bg
+      background-color: purple
+  - - number literal deletion
+    - color: red
+  - - comment code quote
+    - color: suvagray
+  - - punctuation meta selector-attr
+    - color: orange
+  - - type
+    - color: yellow
+  - - tag title selector-class
+    - color: sulu
+  - - string regexp addition
+    - color: green
+  - - class
+    - color: aquamarine
+  - - name selector-tag
+    - color: cyan
+  - - keyword built_in
+    - color: azure
+  - - section bullet
+    - color: blue
+  - - selector-pseudo
+    - color: purple
+  - - variable params attr attribute
+    - color: magenta
+  - - symbol link
+    - color: hotpink
+  - - strong literal title
+    - font-weight: bold
+  - - emphasis
+    - font-style: italic

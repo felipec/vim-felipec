@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+require_relative '../../lib/colors'
+require_relative '../../lib/util'
+
+def conv_selectors(selectors)
+  case selectors
+  when 'main'
+    [ '.hljs' ]
+  when 'selection'
+    [ '.hljs::selection', '.hljs ::selection' ]
+  else
+    selectors.split(' ').map { |e| '.hljs-' + e }
+  end
+end
+
+def conv_declaration(k, v)
+  v = get_color(v) if k.end_with?('color')
+  '  %s: %s;' % [k, v]
+end
+
+def block(selectors, declarations)
+  selectors = conv_selectors(selectors).join(",\n")
+  declarations = declarations.map { |e| conv_declaration(*e) }.join("\n")
+  "%s {\n%s\n}" % [ selectors, declarations ]
+end
+
+puts $data[:blocks].map { |e| block(*e) }.join("\n\n")
