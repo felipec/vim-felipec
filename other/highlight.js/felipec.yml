@@ -27,10 +27,10 @@ blocks:
   - - selection
     - color: bg
       background-color: purple
-  - - number literal deletion
-    - color: red
   - - comment code quote
     - color: suvagray
+  - - number literal deletion
+    - color: red
   - - punctuation meta selector-attr
     - color: orange
   - - type
