@@ -9,16 +9,16 @@
   background-color: #bf8fef;
 }
 
-.hljs-number,
-.hljs-literal,
-.hljs-deletion {
-  color: #ef8f8f;
-}
-
 .hljs-comment,
 .hljs-code,
 .hljs-quote {
   color: #888896;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-deletion {
+  color: #ef8f8f;
 }
 
 .hljs-punctuation,
