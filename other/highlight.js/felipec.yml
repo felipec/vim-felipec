@@ -31,15 +31,15 @@ blocks:
     - color: suvagray
   - - number literal deletion
     - color: red
-  - - punctuation meta selector-attr
+  - - punctuation meta operator subst doctag template-variable selector-attr
     - color: orange
   - - type
     - color: yellow
-  - - tag title selector-class
+  - - tag title selector-class selector-id
     - color: sulu
   - - string regexp addition
     - color: green
-  - - class
+  - - class property
     - color: aquamarine
   - - name selector-tag
     - color: cyan
