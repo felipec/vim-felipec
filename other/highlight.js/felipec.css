@@ -23,6 +23,10 @@
 
 .hljs-punctuation,
 .hljs-meta,
+.hljs-operator,
+.hljs-subst,
+.hljs-doctag,
+.hljs-template-variable,
 .hljs-selector-attr {
   color: #efbf8f;
 }
@@ -33,7 +37,8 @@
 
 .hljs-tag,
 .hljs-title,
-.hljs-selector-class {
+.hljs-selector-class,
+.hljs-selector-id {
   color: #bfef8f;
 }
 
@@ -43,7 +48,8 @@
   color: #8fef8f;
 }
 
-.hljs-class {
+.hljs-class,
+.hljs-property {
   color: #8fefbf;
 }
 
