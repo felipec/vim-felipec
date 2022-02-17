@@ -33,8 +33,9 @@ def rgb_to_x256(*orig)
 end
 
 def hsl_to_rgb(h, s, l)
-  s = s / 100.0
-  l = l / 100.0
+  s /= 100.0
+  l /= 100.0
+  h /= 60.0
 
   r, g, b = 0.0, 0.0, 0.0
 
@@ -43,7 +44,6 @@ def hsl_to_rgb(h, s, l)
     r, g, b = l, l, l
   else
     c = (1 - (2 * l - 1).abs) * s
-    h /= 60.0
     x = c * (1 - (h % 2 - 1).abs)
     m = l - (c / 2)
 
