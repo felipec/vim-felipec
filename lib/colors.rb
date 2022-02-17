@@ -1,3 +1,5 @@
+require_relative './oklch.rb'
+
 def hex_to_rgb(hex)
   r = hex.match(/^#(\h{2})(\h{2})(\h{2})$/)
   return r.captures.map { |e| e.to_i(16) } if r
@@ -65,6 +67,10 @@ def hsl_to_rgb(h, s, l)
   end
 
   return [r, g, b].map { |e| e * 255 }
+end
+
+def oklch_to_rgb(l, c, h)
+  oklch_to_srgb(l / 100.0, c / 100.0, h / 360.0).map { |e| e * 255 }
 end
 
 def get_color_rgb(color)
