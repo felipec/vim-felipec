@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require_relative '../../lib/colors'
+require_relative '../../lib/util'
+
+puts <<EOL
+cursor #{get_color($data[:cursor])}
+
+foreground #{get_color('fg')}
+background #{get_color('bg')}
+
+selection_foreground #{get_color('bg')}
+selection_background #{get_color($data[:selection])}
+
+EOL
+
+$data[:terminal].split(' ').each_with_index do |e,i|
+  puts 'color%d %s' % [i, get_color(e)]
+end
