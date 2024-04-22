@@ -74,7 +74,8 @@ def get_color_rgb(color)
   r = $palette[color.to_sym]
   error("Color not found '#{color}'") if !r
   if r.kind_of?(Array)
-    return hsl_to_rgb(*r)
+    m = method("#{$system}_to_rgb")
+    return m.call(*r)
   elsif r.start_with?('#')
     return hex_to_rgb(r)
   elsif r =~ /^hsl\((\d+), (\d+), (\d+)\)$/
