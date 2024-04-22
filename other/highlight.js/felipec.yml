@@ -1,24 +1,6 @@
 information:
   name: felipec
-
-palette:
-  fg: [240, 6.25, 87.5]
-  bg: [240, 6.25, 12.5]
-
-  suvagray: [240, 6.25, 56.25]
-
-  red: [0, 75, 75]
-  orange: [30, 75, 75]
-  yellow: [60, 75, 75]
-  sulu: [90, 75, 75]
-  green: [120, 75, 75]
-  aquamarine: [150, 75, 75]
-  cyan: [180, 75, 75]
-  azure: [210, 75, 75]
-  blue: [240, 75, 75]
-  purple: [270, 75, 75]
-  magenta: [300, 75, 75]
-  hotpink: [330, 75, 75]
+  palette: felipec
 
 blocks:
   - - main

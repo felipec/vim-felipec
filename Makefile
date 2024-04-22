@@ -14,7 +14,7 @@ other/xfce4-terminal/felipec.theme: other/xfce4-terminal/felipec.yml other/xfce4
 other/highlight.js/felipec.css: other/highlight.js/felipec.yml other/highlight.js/generate
 other/kitty/felipec.conf: other/kitty/felipec.yml other/kitty/generate
 
-$(output): lib/colors.rb lib/util.rb
+$(output): lib/colors.rb lib/util.rb palettes/felipec.yml
 
 $(output):
 	ruby $(<D)/generate $< > $@
