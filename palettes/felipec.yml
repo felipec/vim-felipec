@@ -24,10 +24,10 @@ colors:
 
   darkyellow: [45, 9, 90]
 
-  bg_red:   [37, 3, 30]
-  bg_green: [37, 3, 150]
-  bg_cyan:  [37, 3, 210]
-  bg_blue:  [37, 3, 270]
+  bg_red:   [30, 3, 30]
+  bg_green: [30, 3, 150]
+  bg_cyan:  [30, 3, 210]
+  bg_blue:  [30, 3, 270]
 
   # lightline
   insert_silver:   [85, 5, 210]
