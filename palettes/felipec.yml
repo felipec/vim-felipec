@@ -1,13 +1,13 @@
 system: oklch
 colors:
-  fg: [90, 1, 286]
-  bg: [23, 1, 286]
+  fg: [90, 1, 290]
+  bg: [23, 1, 290]
 
-  black:    [00, 1, 286]
-  darkgray: [30, 1, 286]
-  gray:     [60, 1, 286]
-  suvagray: [70, 1, 286]
-  silver:   [90, 1, 286]
+  black:    [00, 1, 290]
+  darkgray: [30, 1, 290]
+  gray:     [60, 1, 290]
+  suvagray: [70, 1, 290]
+  silver:   [80, 1, 290]
 
   red:        [75, 12, 30]
   orange:     [85, 12, 60]
