@@ -1,3 +1,5 @@
+require_relative './oklch.rb'
+
 def hex_to_rgb(hex)
   r = hex.match(/^#(\h{2})(\h{2})(\h{2})$/)
   return r.captures.map { |e| e.to_i(16) } if r
@@ -67,6 +69,10 @@ def hsl_to_rgb(h, s, l)
   return [r, g, b].map { |e| e * 255 }
 end
 
+def oklch_to_rgb(l, c, h)
+  oklch_to_srgb(l / 100.0, c / 100.0, h / 360.0).map { |e| e * 255 }
+end
+
 def get_color_rgb(color)
   if color.start_with?('#')
     return hex_to_rgb(color)
@@ -74,7 +80,8 @@ def get_color_rgb(color)
   r = $palette[color.to_sym]
   error("Color not found '#{color}'") if !r
   if r.kind_of?(Array)
-    return hsl_to_rgb(*r)
+    m = method("#{$system}_to_rgb")
+    return m.call(*r)
   elsif r.start_with?('#')
     return hex_to_rgb(r)
   elsif r =~ /^hsl\((\d+), (\d+), (\d+)\)$/
