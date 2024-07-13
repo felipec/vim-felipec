@@ -5,7 +5,7 @@ Dark, bright, and simple.
 Disillusioned with all the other colorschemes and generators I decided to create my own.
 The template format draws inspiration from https://github.com/jacoborus/estilo/[estilo], but it's much more simple.
 
-There's also lightline and airline colorschemes, as well as xfce4-terminal and highlight.js themes.
+There's also lightline and airline colorschemes, as well as kitty, xfce4-terminal and highlight.js themes.
 
 == Screenshots ==
 
