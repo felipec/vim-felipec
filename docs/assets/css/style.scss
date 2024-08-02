@@ -1,0 +1,24 @@
+---
+---
+
+@import "jekyll-theme-slate";
+
+section.inner {
+  max-width: 960px;
+}
+
+div.highlight { margin: 1em 0; }
+pre.highlight { padding: 0; }
+
+code {
+  background-color: oklch(60% 0.06 240 / 0.25);
+  box-shadow: none;
+}
+
+pre code {
+  padding: 1em;
+}
+
+pre {
+  border-radius: 4px;
+}
