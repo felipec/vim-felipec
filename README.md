@@ -7,15 +7,9 @@ The template format draws inspiration from [estilo](https://github.com/jacoborus
 
 There's also lightline and airline colorschemes, as well as kitty, xfce4-terminal and highlight.js themes.
 
-## Screenshot
+For screenshots check the [page](https://felipec.github.io/vim-felipec/).
 
-![JavaScript screenshot](https://i.imgur.com/hTnfANk.png)
-
-## Color palette
-
-![Color palette](https://i.imgur.com/RuZK5sr.png)
-
-## Installation
+## Vim
 
 Install with your favorite plugin manager.
 
@@ -29,4 +23,33 @@ Then in your `.vimrc`:
 colorscheme felipec
 let g:lightline = { 'colorscheme': 'felipec' }
 let g:airline_theme = 'felipec'
+```
+
+## highlight.js
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9/build/styles/felipec.min.css">
+```
+
+## kitty
+
+Add to `~/.config/kitty/kitty.conf`:
+
+```
+cursor #5fb8f2
+
+foreground #dedde4
+background #1d1c21
+
+selection_foreground #1d1c21
+selection_background #d991d2
+
+color0 #1d1c21
+color1 #f09080
+color2 #93e4a4
+color3 #fddb7c
+color4 #90aafa
+color5 #d991d2
+color6 #30c2d8
+color7 #bdbdc4
 ```
