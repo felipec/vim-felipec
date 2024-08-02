@@ -7,15 +7,9 @@ The template format draws inspiration from [estilo](https://github.com/jacoborus
 
 There's also lightline and airline colorschemes, as well as kitty, xfce4-terminal and highlight.js themes.
 
-## Screenshot
+## Vim
 
 {% include screenshot.html %}
-
-## Color palette
-
-{% include palette.html %}
-
-## Installation
 
 Install with your favorite plugin manager.
 
@@ -30,3 +24,7 @@ colorscheme felipec
 let g:lightline = { 'colorscheme': 'felipec' }
 let g:airline_theme = 'felipec'
 ```
+
+## Color palette
+
+{% include palette.html %}
