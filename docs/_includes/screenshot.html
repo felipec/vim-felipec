@@ -1,0 +1,113 @@
+<style>
+
+.keyword { color: oklch(85% 0.12 180); }
+.function { color: oklch(85% 0.12 120); font-weight: bold; }
+.preproc { color: oklch(75% 0.12 300); }
+.identifier { color: oklch(75% 0.12 330); }
+.statement { color: oklch(75% 0.12 240); }
+.string { color: oklch(85% 0.12 150); font-style: italic; }
+.constant { color: oklch(75% 0.12 30); }
+
+.todo { color: oklch(75% 0.12 30); background-color: oklch(30% 0.01 290); font-weight: bold; font-style: italic; }
+.comment { color: oklch(70% 0.01 290); font-style: italic; }
+
+.cursor { color: oklch(30% 0.03 30); background-color: oklch(75% 0.12 30); font-weight: bold; }
+.matchparen { color: oklch(75% 0.12 30); background-color: oklch(30% 0.03 30); font-weight: bold; }
+
+div.preview {
+  max-width: 900px;
+  font-family: Roboto Mono;
+  font-size: 1.25rem;
+}
+
+div.preview pre {
+  color: oklch(90% 0.01 290);
+  background-color: oklch(23% 0.01 290);
+  counter-reset: line;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 0;
+}
+
+div.preview code {
+  display: block;
+  padding: 0.2em 0.2em 0 0.2em;
+  color: inherit;
+  background-color: inherit;
+}
+
+span.line {
+  counter-increment: line;
+}
+
+span.line:before {
+  padding-inline: 1em 1em;
+  color: oklch(85% 0.12 60);
+  content: counter(line, decimal-leading-zero);
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  background-color: oklch(30% 0.01 290);
+  align-items: stretch;
+}
+
+.status_l0 {
+  color: oklch(30% 0.01 290);
+  background-color: oklch(75% 0.12 270);
+  font-weight: bold;
+}
+
+.status_r0 {
+  color: oklch(30% 0.01 290);
+  background-color: oklch(80% 0.01 290);
+}
+
+.status_r1 {
+  color: oklch(30% 0.01 290);
+  background-color: oklch(70% 0.01 290);
+}
+
+.status_r2 {
+  color: oklch(80% 0.01 290);
+}
+
+.status span {
+  line-height: 1.4em;
+  padding: 0 1em;
+}
+
+.expand {
+  flex-grow: 1;
+}
+
+</style>
+
+<div class="preview">
+<pre><code><span class="line"><span class="keyword">function</span> <span class="function">truncate</span>(<span class="preproc">string</span>, <span class="preproc">options</span>) <span class="function">{</span></span>
+<span class="line">    <span class="identifier">let</span> separator;</span>
+<span class="line">    <span class="identifier">let</span> length = <span class="constant">DEFAULT_TRUNC_LENGTH</span>;</span>
+<span class="line">    <span class="identifier">let</span> omission = <span class="constant">DEFAULT_TRUNC_OMISSION</span>;</span>
+<span class="line"></span>
+<span class="line">    <span class="statement">if</span> (<span class="function">isObject</span>(options)) <span class="cursor">{</span></span>
+<span class="line">        separator = <span class="string">'separator'</span> <span class="statement">in</span> options ? options.<span class="keyword">separator</span> : separator;</span>
+<span class="line">        length = <span class="string">'length'</span> <span class="statement">in</span> options ? options.<span class="keyword">length</span> : length;</span>
+<span class="line">        omission = <span class="string">'omission'</span> <span class="statement">in</span> options ? <span class="function">baseToString</span>(options.<span class="keyword">omission</span>) : omission;</span>
+<span class="line">    <span class="matchparen">}</span></span>
+<span class="line"></span>
+<span class="line">    string = <span class="function">toString</span>(string);</span>
+<span class="line"></span>
+<span class="line">    <span class="comment">// <span class="todo">TODO</span>: check this</span></span>
+<span class="line">    <span class="identifier">let</span> strSymbols;</span>
+<span class="line">    <span class="identifier">let</span> strLength = string.<span class="keyword">length</span>;</span>
+<span class="line">    <span class="statement">if</span> (<span class="function">hasUnicode</span>(string)) <span class="function">{</span></span>
+<span class="line">        strSymbols = <span class="function">stringToArray</span>(string);</span>
+<span class="line">        strLength = strSymbols.<span class="keyword">length</span>;</span>
+<span class="line">    <span class="function">}</span></span></code><div class="status">
+<span class="status_l0">NORMAL</span><span class="status_l1">truncate.ts</span>
+<div class="expand"></div>
+<span class="status_r2">typescript</span><span class="status_r1">58:28</span><span class="status_r0">52%</span>
+</div></pre>
+</div>

@@ -9,7 +9,7 @@ There's also lightline and airline colorschemes, as well as kitty, xfce4-termina
 
 ## Screenshot
 
-![JavaScript screenshot](https://i.imgur.com/hTnfANk.png)
+{% include screenshot.html %}
 
 ## Color palette
 
