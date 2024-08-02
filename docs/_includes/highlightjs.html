@@ -1,4 +1,4 @@
-<pre class="highlight"><code class="language-c">	/* Determine parents */
+<pre class="highlight"><code class="language-c" id="hljs">	/* Determine parents */
 	reflog_msg = getenv("GIT_REFLOG_ACTION");
 	if (!current_head) {
 		if (!reflog_msg)
@@ -31,4 +31,7 @@
 <link rel="stylesheet" href="/vim-felipec/assets/css/hljs-felipec.css">
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9/build/highlight.min.js"></script>
 
-<script>hljs.highlightAll();</script>
+<script>
+  const el = document.getElementById('hljs');
+  hljs.highlightElement(el);
+</script>
