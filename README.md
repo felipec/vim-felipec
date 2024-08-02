@@ -7,15 +7,13 @@ The template format draws inspiration from [estilo](https://github.com/jacoborus
 
 There's also lightline and airline colorschemes, as well as kitty, xfce4-terminal and highlight.js themes.
 
-## Screenshots
+## Screenshot
 
-![C screenshot](https://i.imgur.com/d8Xk0QS.png)
-![JavaScript screenshot](https://i.imgur.com/KZR1q61.png)
-![Ruby screenshot](https://i.imgur.com/jFtGzuq.png)
+![JavaScript screenshot](https://i.imgur.com/hTnfANk.png)
 
 ## Color palette
 
-![Color palette](https://i.imgur.com/e0GW35t.png)
+![Color palette](https://i.imgur.com/RuZK5sr.png)
 
 ## Installation
 
