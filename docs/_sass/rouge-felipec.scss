@@ -1,0 +1,45 @@
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: oklch(90% 0.01 290);
+  background-color: oklch(23% 0.01 290);
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: oklch(70% 0.01 290);
+  font-style: italic;
+}
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: oklch(75% 0.12 240);
+}
+.highlight .o, .highlight .ow {
+  color: oklch(85% 0.12 60);
+}
+.highlight .p, .highlight .pi {
+  color: oklch(75% 0.12 330);
+}
+.highlight .kt {
+  color: oklch(90% 0.12 90);
+}
+.highlight .nb, .highlight .bp {
+  color: oklch(75% 0.12 30);
+}
+.highlight .no {
+  color: oklch(75% 0.12 30);
+}
+.highlight .nf, .highlight .fm {
+  color: oklch(85% 0.12 120);
+  font-weight: bold;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+  color: oklch(85% 0.12 150);
+  font-style: italic;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: oklch(75% 0.12 30);
+}
+.highlight .cp {
+  color: oklch(75% 0.12 300);
+}
+.highlight .cpf {
+  color: oklch(85% 0.12 150);
+}
