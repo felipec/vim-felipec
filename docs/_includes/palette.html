@@ -2,18 +2,15 @@
 
 #colors {
   background-color: oklch(23% 0.01 290);
-  width: min-content;
   display: grid;
   grid-template-columns: repeat(6, auto);
-  justify-items: center;
+  justify-items: stretch;
   grid-gap: 2vw;
   padding: 2vw;
 }
 
 #colors div {
-  width: 10vw;
-  height: 10vw;
-  border-radius: 2vw;
+  border-radius: 20%;
 }
 
 </style>
@@ -21,6 +18,15 @@
 <div id="colors"></div>
 
 <script>
+
+  const colors_el = document.getElementById('colors');
+
+  function recalc() {
+    colors_el.style.height = colors_el.offsetWidth * 13 / 37 + 'px';
+  }
+
+  window.addEventListener('load', recalc);
+  window.addEventListener('resize', recalc);
 
   const palette = {
     fg:         'oklch(90% 0.01 290)',
