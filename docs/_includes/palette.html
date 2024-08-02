@@ -1,0 +1,53 @@
+<style>
+
+#colors {
+  background-color: oklch(23% 0.01 290);
+  width: min-content;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-items: center;
+  grid-gap: 25px;
+  padding: 25px;
+}
+
+#colors div {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+</style>
+
+<div id="colors"></div>
+
+<script>
+
+  const palette = {
+    fg:         'oklch(90% 0.01 290)',
+    silver:     'oklch(80% 0.01 290)',
+    suvagray:   'oklch(70% 0.01 290)',
+    gray:       'oklch(60% 0.01 290)',
+    xxx:        'oklch(50% 0.01 290)',
+    darkgray:   'oklch(30% 0.01 290)',
+
+    red:        'oklch(75% 0.12  30)',
+    orange:     'oklch(85% 0.12  60)',
+    yellow:     'oklch(90% 0.12  90)',
+    sulu:       'oklch(85% 0.12 120)',
+    green:      'oklch(85% 0.12 150)',
+    aquamarine: 'oklch(85% 0.12 180)',
+    cyan:       'oklch(75% 0.12 210)',
+    azure:      'oklch(75% 0.12 240)',
+    blue:       'oklch(75% 0.12 270)',
+    purple:     'oklch(75% 0.12 300)',
+    magenta:    'oklch(75% 0.12 330)',
+    hotpink:    'oklch(75% 0.12 360)',
+  };
+
+  for (const e of Object.values(palette)) {
+    const node = document.createElement('div');
+    node.style.backgroundColor = e;
+    colors.appendChild(node);
+  }
+
+</script>

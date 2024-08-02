@@ -13,7 +13,7 @@ There's also lightline and airline colorschemes, as well as kitty, xfce4-termina
 
 ## Color palette
 
-![Color palette](https://i.imgur.com/RuZK5sr.png)
+{% include palette.html %}
 
 ## Installation
 
