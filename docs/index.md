@@ -25,6 +25,14 @@ let g:lightline = { 'colorscheme': 'felipec' }
 let g:airline_theme = 'felipec'
 ```
 
+## highlight.js
+
+{% include highlightjs.html %}
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9/build/styles/felipec.min.css">
+```
+
 ## Color palette
 
 {% include palette.html %}

@@ -1,0 +1,34 @@
+<pre><code class="language-c">	/* Determine parents */
+	reflog_msg = getenv("GIT_REFLOG_ACTION");
+	if (!current_head) {
+		if (!reflog_msg)
+			reflog_msg = "commit (initial)";
+	} else if (amend) {
+		if (!reflog_msg)
+			reflog_msg = "commit (amend)";
+		parents = copy_commit_list(current_head-&gt;parents);
+	} else if (whence == FROM_MERGE) {
+		struct strbuf m = STRBUF_INIT;
+		FILE *fp;
+		int allow_fast_forward = 1;
+		struct commit_list **pptr = &amp;parents;
+		int reverse_parents = 0;
+
+		if (!reflog_msg)
+			reflog_msg = "commit (merge)";
+		pptr = commit_list_append(current_head, pptr);
+		fp = xfopen(git_path_merge_head(the_repository), "r");
+		while (strbuf_getline_lf(&amp;m, fp) != EOF) {
+			struct commit *parent;
+
+			parent = get_merge_parent(m.buf);
+			if (!parent)
+				die(_("Corrupt MERGE_HEAD file (%s)"), m.buf);
+			pptr = commit_list_append(parent, pptr);
+		}
+		fclose(fp);</code></pre>
+
+<link rel="stylesheet" href="/vim-felipec/assets/css/hljs-felipec.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9/build/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
