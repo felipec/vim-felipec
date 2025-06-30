@@ -23,6 +23,7 @@ highlights:
   String: 'green - i'
   Special: 'orange - i'
   Delimiter: 'orange'
+  Operator: 'azure'
   Underlined: '. . u'
 
   Cursor: '- - r'
