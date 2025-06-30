@@ -22,6 +22,7 @@ highlights:
   Function: 'sulu - b'
   String: 'green - i'
   Special: 'orange - i'
+  Delimiter: 'orange'
   Underlined: '. . u'
 
   Cursor: '- - r'
@@ -65,8 +66,8 @@ highlights:
   diffNewFile: 'green'
   diffOldFile: 'red'
 
-  rubyArrayDelimiter: 'azure'
-  rubyCurlyBlockDelimiter: 'azure'
+  rubyArrayDelimiter: 'orange'
+  rubyCurlyBlockDelimiter: 'orange'
 
   SignColumn: '. darkgray .'
   GitGutterAdd: 'green darkgray'
