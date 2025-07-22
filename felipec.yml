@@ -2,7 +2,6 @@ information:
   name: felipec
   background: dark
   author: 'Felipe Contreras <felipe.contreras@gmail.com>'
-  palette: felipec
 
 highlights:
   Normal: 'fg bg'

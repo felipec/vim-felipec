@@ -17,4 +17,4 @@ other/kitty/felipec.conf: other/kitty/felipec.yml other/kitty/generate
 $(output): lib/colors.rb lib/util.rb palettes/felipec.yml
 
 $(output):
-	ruby $(<D)/generate $< > $@
+	ruby $(<D)/generate $< felipec > $@

@@ -1,6 +1,5 @@
 information:
   name: FelipeC
-  palette: felipec
 
 terminal: 'bg red green yellow blue magenta cyan silver'
 activity: 'blue'
