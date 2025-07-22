@@ -1,3 +1,5 @@
+palette := felipec
+
 output += colors/felipec.vim
 output += autoload/lightline/colorscheme/felipec.vim
 output += autoload/airline/themes/felipec.vim
@@ -14,7 +16,7 @@ other/xfce4-terminal/felipec.theme: other/xfce4-terminal/felipec.yml other/xfce4
 other/highlight.js/felipec.css: other/highlight.js/felipec.yml other/highlight.js/generate
 other/kitty/felipec.conf: other/kitty/felipec.yml other/kitty/generate
 
-$(output): lib/colors.rb lib/util.rb palettes/felipec.yml
+$(output): lib/colors.rb lib/util.rb palettes/$(palette).yml
 
 $(output):
-	ruby $(<D)/generate $< felipec > $@
+	ruby $(<D)/generate $< $(palette) > $@
