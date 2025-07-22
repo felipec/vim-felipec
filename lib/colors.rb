@@ -78,7 +78,7 @@ def get_color_rgb(color)
     return hex_to_rgb(color)
   end
   r = $palette[color.to_sym]
-  error("Color not found '#{color}'") if !r
+  abort("Color not found '#{color}'") if !r
   if r.kind_of?(Array)
     m = method("#{$system}_to_rgb")
     return m.call(*r)

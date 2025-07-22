@@ -8,8 +8,3 @@ palette_file = "palettes/#{ARGV[1]}.yml"
 palette_info = YAML.load_file(palette_file, symbolize_names: true)
 $palette = palette_info[:colors]
 $system = palette_info[:system] || 'hsl'
-
-def error(message)
-  $stderr.puts message
-  exit 1
-end
