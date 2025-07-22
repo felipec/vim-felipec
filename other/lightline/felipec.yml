@@ -1,6 +1,3 @@
-information:
-  name: felipec
-
 modes:
   normal:
     left: [ 'darkgray blue bold', 'fg darkgray' ]
