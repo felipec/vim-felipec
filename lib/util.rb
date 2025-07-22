@@ -1,6 +1,6 @@
 require 'yaml'
 
-$data = YAML.load(ARGF, symbolize_names: true)
+$data = YAML.load_file(ARGV[0], symbolize_names: true)
 
 $information = $data[:information]
 $name = $information[:name]
